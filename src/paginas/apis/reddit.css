@@ -1,0 +1,35 @@
+.reddit-posts {
+    font-family: Arial, sans-serif;
+    max-width: 800px; /* Ajusta el ancho máximo según tu diseño */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .post-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .post-item {
+    width: calc(45% - 10px); /* Calcula el ancho para mostrar 2 por fila */
+    margin-bottom: 20px;
+    background-color: #f0f0f0; /* Color de fondo */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff; /* Sombras neumórficas */
+  }
+  
+  .post-link {
+    text-decoration: none;
+    color: #0366d6; /* Color del enlace */
+    font-weight: bold;
+  }
+  
+  .post-author {
+    color: #999;
+    font-style: italic;
+  }
+  

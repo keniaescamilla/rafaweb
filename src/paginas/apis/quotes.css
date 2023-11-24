@@ -1,0 +1,31 @@
+.quote-card {
+   display: flex;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #f0f0f0; /* Color de fondo */
+    box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff; /* Sombras */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 40vh; /* Opcional: ajusta la altura según tu diseño */
+  }
+  
+  .quote-content {
+    text-align: center;
+  }
+  
+  .quote-text {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .quote-author {
+    font-size: 14px;
+    color: #555;
+  }
+  body{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }

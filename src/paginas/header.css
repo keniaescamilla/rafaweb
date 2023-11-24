@@ -1,0 +1,10 @@
+.header-with-bg {
+    background-image:('../imagenes/fotor-ai-2023112184125.jpg'); 
+    background-size: contain; /* Ajuste para que la imagen ocupe solo el espacio del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita si es más pequeña que el contenedor */
+ 
+}
+img{
+    height: 600px;
+    width: 1200px;
+}
