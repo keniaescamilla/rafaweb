@@ -91,11 +91,9 @@ link{
 body {
   background-size: cover;
   background-color: #e5e9f4;
-  padding: 2rem;
   padding-bottom: 4rem;
-  padding-top: 4rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-top: 3.9rem;
+
 }
 card{
   text-align: center;

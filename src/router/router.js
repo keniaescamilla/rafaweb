@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-ro
 import Body from '../paginas/body';
 import AboutUs from '../paginas/about';
 import RedditPosts from '../paginas/apis/subreddit';
+import Login from '../paginas/loginpag';
 
 
 
@@ -30,6 +31,10 @@ function RouterComponent() {
               
               <Link to="/Mapa">Encuentra centros de ayuda cerca de ti</Link>
             </li>
+            <li>
+              
+              <Link to="/Login">registrate o inicia sesion</Link>
+            </li>
           
             {/* Otros enlaces de navegación que desees agregar */}
           </ul>
@@ -49,6 +54,10 @@ function RouterComponent() {
         <Route exact path="/Foro">
           {/* Página de MedicationTable */}
           {isLoggedIn ? <RedditPosts /> : <Redirect to="/Foro" />}
+        </Route>
+        <Route exact path="/Login">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? < Login/> : <Redirect to="/Login" />}
         </Route>
         
         {/* Otras rutas de tu aplicación */}

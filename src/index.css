@@ -38,7 +38,7 @@ html, body {
   
   body {
 	font-family: Lato, Helvetica, Arial, sans-serif;
-	background: #eee;
+	background: none;
   }
   
   a {
@@ -53,7 +53,7 @@ html, body {
 							Navbar
 	======================================================*/
   #navbar {
-	background: white;
+	background: rgba(255, 255, 255,0.7) ;
 	color: rgb(13, 26, 38);
 	position: fixed;
 	top: 0;
