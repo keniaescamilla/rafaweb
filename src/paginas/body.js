@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 const Body = () => {
   return (
     
-    <div>
+    <div className='body-home'>
          <br></br>
          <br></br>
-      <h1>Hola! ¿Como podemos ayudarte hoy?</h1>
+      <h1 className='h1-body'>Hola! ¿Como podemos ayudarte hoy?</h1>
       <br></br>
       <br></br>
       <br></br>
@@ -19,29 +19,50 @@ const Body = () => {
         </button>
         <button className="neumorphic">
           <i className="fa-light fa-dna"></i>
-          <span>Encuentra Centros de Ayuda</span>
+          <span>
+        <Link to="/Maps">Encuentra centros de ayuda</Link>
+      </span>
         </button>
         <button className="neumorphic">
           <i className="fa-light fa-chart-mixed"></i>
-          <span>Contenido Didactico!!</span>
+          <span>
+        <Link to="/Contenido">Contenido didactico</Link>
+      </span>
+          
         </button>
+        <Link to="/Tests">
         <button className="neumorphic">
-          <i className="fa-light fa-atom"></i>
-          <span>Tests </span>
-        </button>
+      <i className="fa-light fa-disease"></i>
+      <span>
+        <Link to="/Tests">Tests Psicológicos</Link>
+      </span>
+    </button>
+    </Link>
         <button className="neumorphic">
           <i className="fa-light fa-seedling"></i>
           <span>Mi Agenda</span>
         </button>
+        <Link to="/Meds">
         <button className="neumorphic">
-          <i className="fa-light fa-disease"></i>
-          <span>Mis Medicamentos</span>
-        </button>
+      <i className="fa-light fa-disease"></i>
+      <span>
+        <Link to="/Meds">Conoce tus Medicamentos</Link>
+      </span>
+    </button>
+    </Link>
         <Link to="/Foro">
         <button className="neumorphic">
       <i className="fa-light fa-disease"></i>
       <span>
         <Link to="/Foro">Foros</Link>
+      </span>
+    </button>
+    </Link>
+    <Link to="/Diario">
+        <button className="neumorphic">
+      <i className="fa-light fa-disease"></i>
+      <span>
+        <Link to="/Diario"> Tu Diario Personal</Link>
       </span>
     </button>
     </Link>
@@ -51,6 +72,7 @@ const Body = () => {
        <br></br>
       <br></br>
       <br></br>
+     
    </div>
     </div>
   );

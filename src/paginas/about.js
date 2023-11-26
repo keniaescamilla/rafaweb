@@ -32,21 +32,43 @@ Esta versión está dirigida a los usuarios, enfocándose en la conexión emocio
 
 
         </p>
+        <br></br>
+        <br></br>
         <h2>MISION </h2>
+        <br></br>
         <p> Misión:
 En Tsakin, nos comprometemos a ser un faro de esperanza y apoyo para la salud mental en México. Buscamos proporcionar recursos accesibles, una comunidad de apoyo y educación integral para empoderar a quienes enfrentan desafíos mentales. Nuestra misión es ser el puente que une a las personas con herramientas que fomenten la comprensión, la resiliencia y la recuperación.
 </p>
+<br></br>
+<br></br>
         <h2>VISION </h2>
+        <br></br>
         <p>Visión:
 Nuestra visión en Tsakin es transformar la forma en que se percibe y aborda la salud mental en México, especialmente entre los jóvenes. Anhelamos crear un entorno en el que cada individuo se sienta valorado, comprendido y respaldado en su viaje hacia la salud mental. Visualizamos una sociedad donde hablar de salud mental sea tan natural como cualquier otro aspecto de la vida cotidiana.</p>
+<br></br>
+<br></br>
         <h2>VALORES </h2>
+        <br></br>
         <p>Empatía: Nos comprometemos a escuchar con comprensión y mostrar empatía hacia cada historia y experiencia.
 Accesibilidad: Buscamos ofrecer recursos y apoyo fácilmente accesibles para todos, sin importar la situación o ubicación.
 Colaboración: Creemos en la fuerza de unir esfuerzos, colaborar con expertos y comunidades para impulsar el cambio.
 Inclusividad: Valoramos la diversidad de experiencias y perspectivas, creando un espacio acogedor para todos.
 Compromiso con la excelencia: Nos esforzamos por proporcionar información precisa, actualizada y de calidad en todos nuestros recursos y servicios.
 Estos elementos -misión, visión y valores- conforman la base sobre la cual Tsakin se compromete a trabajar y servir a la comunidad, creando un impacto positivo en la salud mental en México.</p>
+<br></br>
+<br></br>
         <h2>CODIGO DE ETICA </h2>
+        <br></br>
+        <p>Código de Ética:
+Respeto y Confidencialidad
+Confidencialidad Absoluta: Nos comprometemos a mantener la privacidad de cada individuo y a proteger la información personal de manera estricta y confidencial.
+Respeto sin Juicios: Abrazamos la diversidad mental y tratamos a cada individuo con respeto, empatía y sin prejuicios.
+Acceso y Empoderamiento
+Acceso Equitativo: Trabajamos para brindar acceso igualitario a recursos y herramientas para mejorar la salud mental, independientemente de la condición socioeconómica o geográfica.
+Empoderamiento Personal: Buscamos empoderar a cada individuo para que tome decisiones informadas sobre su bienestar mental y emocional.
+Integridad y Apoyo Continuo
+Integridad Profesional: Nuestro compromiso es ofrecer servicios de calidad con integridad y ética profesional, priorizando el bienestar de nuestros usuarios.
+Apoyo Continuo: Estamos comprometidos a brindar apoyo continuo, ofreciendo recursos, orientación y asistencia durante todo el proceso de mejora de la salud mental.</p>
         </div>
 
     );

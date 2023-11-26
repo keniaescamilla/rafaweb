@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-ro
 import Body from '../paginas/body';
 import AboutUs from '../paginas/about';
 import RedditPosts from '../paginas/apis/subreddit';
-import Chatbot from '../paginas/apis/chatbot'
+
 
 
 function RouterComponent() {
@@ -30,6 +30,19 @@ function RouterComponent() {
               
               <Link to="/Mapa">Encuentra centros de ayuda cerca de ti</Link>
             </li>
+            <li>
+              
+              <Link to="/Login">registrate o inicia sesion</Link>
+            </li>
+            <li>
+              
+              <Link to="/Tests">Test Psicológicos</Link>
+            </li>
+            <li>
+              
+              <Link to="/Diario">diario personal</Link>
+            </li>
+            
           
             {/* Otros enlaces de navegación que desees agregar */}
           </ul>
@@ -49,10 +62,6 @@ function RouterComponent() {
         <Route exact path="/Foro">
           {/* Página de MedicationTable */}
           {isLoggedIn ? <RedditPosts /> : <Redirect to="/Foro" />}
-        </Route>
-        <Route exact path="/Chatbot">
-          {/* Página de chatbot */}
-          {isLoggedIn ? <Chatbot /> : <Redirect to="/Chatbot" />}
         </Route>
         
         {/* Otras rutas de tu aplicación */}
