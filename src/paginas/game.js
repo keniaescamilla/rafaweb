@@ -3,7 +3,7 @@ import React from 'react';
 const TwineGame = ({ games }) => {
   return (
     <div>
-      <h1>Games:</h1>
+      <h1>Juegos:</h1>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         {games.map((game, index) => (
           <iframe
