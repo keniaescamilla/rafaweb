@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import YouTube from 'react-youtube';
+import '../game.css';
 
 const YouTubeVideo = () => {
   const [videoId, setVideoId] = useState('');
@@ -31,8 +32,10 @@ const YouTubeVideo = () => {
   }, []);
 
   return (
-    <div>
+    <div className='container-neumorphic'>
       {videoId && <YouTube videoId={videoId} />}
+      <br></br>
+    
     </div>
   );
 };

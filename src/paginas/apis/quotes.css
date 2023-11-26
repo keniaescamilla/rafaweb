@@ -1,9 +1,5 @@
 .quote-card {
-   display: flex;
-    width: 300px;
-    padding: 20px;
     border-radius: 15px;
-    background-color: #f0f0f0; /* Color de fondo */
     box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff; /* Sombras */
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
@@ -28,4 +24,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+  }
+  p.quote-text{
+    font-size: 20px;
   }

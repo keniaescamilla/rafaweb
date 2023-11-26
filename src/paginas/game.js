@@ -1,8 +1,9 @@
 import React from 'react';
-
+import './game.css';
 const TwineGame = ({ games }) => {
   return (
-    <div>
+ 
+    <div className='container-neumorphic'>
       <h1>Juegos:</h1>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         {games.map((game, index) => (
@@ -29,7 +30,7 @@ const Contenidos = () => {
       height: '167',
     },
     {
-      src: 'https://itch.io/embed/273806?link_color=000000',
+      src: 'https://itch.io/embed/273806?link_color=ffffff',
       width: '552',
       height: '167',
     },

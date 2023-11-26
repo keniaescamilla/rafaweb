@@ -1,10 +1,10 @@
 import React from 'react';
-import { useEffect,useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './paginas/navbar';
 import Footer from './paginas/footer';
 import Body from './paginas/body';
 import Header from './paginas/header';
+import HeroEffects from './paginas/header';
 import QuotesContainer from './paginas/apis/frasesinsp';
 import RedditPosts from './paginas/apis/subreddit';
 import AboutUs from '../src/paginas/about';
@@ -13,7 +13,6 @@ import MapComponent from './paginas/apis/mapscript';
 import Tests from './paginas/apis/tests';
 import Contenidos from './paginas/game';
 import TusMedicamentos from './paginas/apis/medicamentosbd';
-import Loader from './paginas/loader';
 import InternetArchive from './paginas/apis/libros';
 import YouTubeVideo from './paginas/apis/videos';
 import DiarioForm from './paginas/apis/diario';
@@ -22,42 +21,47 @@ import DiarioList from './paginas/apis/obtenerdiario';
 
 const Content = () => {
   return (
-    <div className="content">
+    <div >
       <Navbar />
-      <Header />
-    
       <Body />
-    
       <QuotesContainer />
+      <Footer />
     </div>
   );
 };
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simula una carga (puedes realizar una lógica de carga real aquí)
-    setTimeout(() => {
-      setLoading(false); // Cambia el estado para ocultar el loader
-    }, 2000); // Tiempo de simulación de carga (2 segundos)
-  }, []);
+  
   return (
     <Router>
     <div className="App">
-      {loading ? ( // Muestra el loader si está cargando
-        <Loader />
-      ) : (
         <Routes>
-          <Route path="/Home" element={<Content/>} />
+          <Route path="/Home" element={
+          <>
+          <HeroEffects />
+          <Content/>
+          
+          </>
+          } />
           <Route path="/Maps" element={<MapComponent />} />
           <Route path="/Contenido" element={
           <>
           <Navbar />
         <h1>Contenido didactico</h1>
           <YouTubeVideo />
+          <br></br>
+          <br></br>
+          <br></br>
           <Contenidos/>
+          <br></br>
+          <br></br>
+          <br></br>
           <InternetArchive />
+          <br></br><br></br><br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
           <Footer />
           </>
           } />
@@ -78,6 +82,11 @@ const App = () => {
           path="/Diario"
           element={
             <>
+            <Navbar />
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <DiarioForm/>
       <DiarioList />
             </>

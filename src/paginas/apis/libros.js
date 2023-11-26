@@ -4,7 +4,7 @@ import './libros.css'; // Archivo CSS para los estilos
 
 const InternetArchive = () => {
   const [data, setData] = useState([]);
-  const [visibleBooks, setVisibleBooks] = useState(12); // Estado para controlar el número de libros visibles
+  const [visibleBooks, setVisibleBooks] = useState(3); // Estado para controlar el número de libros visibles
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,11 +23,11 @@ const InternetArchive = () => {
 
   
   const loadMoreBooks = () => {
-    setVisibleBooks(visibleBooks + 10); 
+    setVisibleBooks(visibleBooks + 20); 
   };
 
   return (
-    <div className="book-container">
+    <div className="container-neumorphic">
       <h1>Libros</h1>
       <div className="book-list">
         {data &&

@@ -36,7 +36,10 @@ const DiarioForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Diario Secreto</h2>
+      <h2 className='h2-diario'>Escribe Como Te Sientes </h2>
+      <br></br>
+      <br></br>
+      <br></br>
       {mensaje && <p>{mensaje}</p>}
       <label>
         Título:
@@ -48,11 +51,11 @@ const DiarioForm = () => {
       </label>
       <label>
         Estado de ánimo:
-        <input type="text" value={estadoAnimo} onChange={(e) => setEstadoAnimo(e.target.value)} />
+        <input  type="text" value={estadoAnimo} onChange={(e) => setEstadoAnimo(e.target.value)} />
       </label>
       <label>
         Texto:
-        <textarea value={texto} onChange={(e) => setTexto(e.target.value)} />
+        <textarea className='text-diario' value={texto} onChange={(e) => setTexto(e.target.value)} />
       </label>
       <button type="submit">Guardar</button>
     </form>

@@ -8,7 +8,7 @@ const Body = () => {
     <div className='body-home'>
          <br></br>
          <br></br>
-      <h1>Hola! ¿Como podemos ayudarte hoy?</h1>
+      <h1 className='h1-body'>Hola! ¿Como podemos ayudarte hoy?</h1>
       <br></br>
       <br></br>
       <br></br>
@@ -72,6 +72,7 @@ const Body = () => {
        <br></br>
       <br></br>
       <br></br>
+     
    </div>
     </div>
   );

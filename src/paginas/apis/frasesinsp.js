@@ -44,9 +44,10 @@ const QuotesContainer = () => {
 
   return (
     <div className="quotes-container">
-      <h1>Inspiring Quotes</h1>
       {currentQuote && <QuoteCard text={currentQuote.text} author={currentQuote.author} />}
+      
     </div>
+    
   );
 };
 
