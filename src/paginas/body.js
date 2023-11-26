@@ -30,18 +30,26 @@ const Body = () => {
       </span>
           
         </button>
+        <Link to="/Tests">
         <button className="neumorphic">
-          <i className="fa-light fa-atom"></i>
-          <span>Tests </span>
-        </button>
+      <i className="fa-light fa-disease"></i>
+      <span>
+        <Link to="/Tests">Tests Psicológicos</Link>
+      </span>
+    </button>
+    </Link>
         <button className="neumorphic">
           <i className="fa-light fa-seedling"></i>
           <span>Mi Agenda</span>
         </button>
+        <Link to="/Meds">
         <button className="neumorphic">
-          <i className="fa-light fa-disease"></i>
-          <span>Mis Medicamentos</span>
-        </button>
+      <i className="fa-light fa-disease"></i>
+      <span>
+        <Link to="/Meds">Conoce tus Medicamentos</Link>
+      </span>
+    </button>
+    </Link>
         <Link to="/Foro">
         <button className="neumorphic">
       <i className="fa-light fa-disease"></i>

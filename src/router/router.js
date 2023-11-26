@@ -6,7 +6,8 @@ import RedditPosts from '../paginas/apis/subreddit';
 import Login from '../paginas/loginpag';
 import MapComponent from '../paginas/apis/mapscript';
 import Contenidos from '../paginas/game';
-
+import TusMedicamentos from '../paginas/apis/medicamentosbd';
+import Tests from '../paginas/apis/tests';
 
 
 function RouterComponent() {
@@ -36,6 +37,10 @@ function RouterComponent() {
             <li>
               
               <Link to="/Login">registrate o inicia sesion</Link>
+            </li>
+            <li>
+              
+              <Link to="/Tests">Test Psicológicos</Link>
             </li>
           
             {/* Otros enlaces de navegación que desees agregar */}
@@ -68,6 +73,14 @@ function RouterComponent() {
         <Route exact path="/Contenidos">
           {/* Página de MedicationTable */}
           {isLoggedIn ? <Contenidos /> : <Redirect to="/Contenidos" />}
+        </Route>
+        <Route exact path="/Meds">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? <TusMedicamentos /> : <Redirect to="/Meds" />}
+        </Route>
+        <Route exact path="/Tests">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? <Tests /> : <Redirect to="/Tests" />}
         </Route>
         
         {/* Otras rutas de tu aplicación */}

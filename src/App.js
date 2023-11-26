@@ -9,8 +9,10 @@ import RedditPosts from './paginas/apis/subreddit';
 import AboutUs from '../src/paginas/about';
 import Login from './paginas/loginpag/login';
 import MapComponent from './paginas/apis/mapscript';
-// import TwineGame from './paginas/game';
+import Tests from './paginas/apis/tests';
 import Contenidos from './paginas/game';
+import TusMedicamentos from './paginas/apis/medicamentosbd';
+
 
 const Content = () => {
   return (
@@ -33,6 +35,8 @@ const App = () => {
           <Route path="/Home" element={<Content />} />
           <Route path="/Maps" element={<MapComponent />} />
           <Route path="/Contenido" element={<Contenidos />} />
+          <Route path="/Meds" element={<TusMedicamentos />} />
+          <Route path="/Tests" element={<Tests />} />
           <Route path="/about" element={
             <>
               <Navbar />
