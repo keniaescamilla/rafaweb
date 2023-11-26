@@ -58,6 +58,14 @@ const Body = () => {
       </span>
     </button>
     </Link>
+    <Link to="/Diario">
+        <button className="neumorphic">
+      <i className="fa-light fa-disease"></i>
+      <span>
+        <Link to="/Diario"> Tu Diario Personal</Link>
+      </span>
+    </button>
+    </Link>
 
       </div>
    <div>

@@ -8,6 +8,7 @@ import MapComponent from '../paginas/apis/mapscript';
 import Contenidos from '../paginas/game';
 import TusMedicamentos from '../paginas/apis/medicamentosbd';
 import Tests from '../paginas/apis/tests';
+import DiarioForm from '../paginas/apis/diario';
 
 
 function RouterComponent() {
@@ -41,6 +42,10 @@ function RouterComponent() {
             <li>
               
               <Link to="/Tests">Test Psicológicos</Link>
+            </li>
+            <li>
+              
+              <Link to="/Diario">diario personal</Link>
             </li>
             
           
@@ -82,6 +87,10 @@ function RouterComponent() {
         <Route exact path="/Tests">
           {/* Página de MedicationTable */}
           {isLoggedIn ? <Tests /> : <Redirect to="/Tests" />}
+        </Route>
+        <Route exact path="/Diario">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? <DiarioForm /> : <Redirect to="/Diario" />}
         </Route>
         
         {/* Otras rutas de tu aplicación */}

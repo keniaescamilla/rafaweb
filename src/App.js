@@ -16,6 +16,8 @@ import TusMedicamentos from './paginas/apis/medicamentosbd';
 import Loader from './paginas/loader';
 import InternetArchive from './paginas/apis/libros';
 import YouTubeVideo from './paginas/apis/videos';
+import DiarioForm from './paginas/apis/diario';
+import DiarioList from './paginas/apis/obtenerdiario';
 
 
 const Content = () => {
@@ -71,6 +73,15 @@ const App = () => {
                 <Footer />
               </>
             }
+          />
+          <Route
+          path="/Diario"
+          element={
+            <>
+            <DiarioForm/>
+      <DiarioList />
+            </>
+          }
           />
           <Route
             path="/Foro"
