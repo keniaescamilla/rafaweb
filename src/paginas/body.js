@@ -15,7 +15,7 @@ const Body = () => {
       <div className="buttons">
         <button className="neumorphic active">
           <i className="fa-light fa-fire"></i>
-          <span>chat con psicologo IA</span>
+          <span> <Link to="/Chatbot">chat con psicologo IA</Link></span>
         </button>
         <button className="neumorphic">
           <i className="fa-light fa-dna"></i>
