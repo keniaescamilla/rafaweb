@@ -2,6 +2,7 @@ import React from 'react';
 import './header.css';
 const Header = () => {
   return (
+    <div className='body-home'>
     <div className="container">
 
       <header className="header-with-bg">
@@ -10,6 +11,7 @@ const Header = () => {
       <div className="content">
         {/* Contenido principal */}
       </div>
+    </div>
     </div>
   );
 };

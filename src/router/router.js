@@ -4,6 +4,8 @@ import Body from '../paginas/body';
 import AboutUs from '../paginas/about';
 import RedditPosts from '../paginas/apis/subreddit';
 import Login from '../paginas/loginpag';
+import MapComponent from '../paginas/apis/mapscript';
+import Contenidos from '../paginas/game';
 
 
 
@@ -58,6 +60,14 @@ function RouterComponent() {
         <Route exact path="/Login">
           {/* Página de MedicationTable */}
           {isLoggedIn ? < Login/> : <Redirect to="/Login" />}
+        </Route>
+        <Route exact path="/Maps">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? < MapComponent/> : <Redirect to="/Maps" />}
+        </Route>
+        <Route exact path="/Contenidos">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? <Contenidos /> : <Redirect to="/Contenidos" />}
         </Route>
         
         {/* Otras rutas de tu aplicación */}

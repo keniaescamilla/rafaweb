@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import'../index.css';
 
+
 class Navbar extends Component {
   state = {
     menuToggle: false
@@ -17,6 +18,7 @@ class Navbar extends Component {
     const { menuToggle } = this.state;
 
     return (
+      <div className='body-home'>
       <nav id="navbar" className={menuToggle ? 'active' : ''}>
         <div className="nav-wrapper">
           {/* Navbar Logo */}
@@ -52,7 +54,9 @@ class Navbar extends Component {
 
           </ul>
         </div>
+     
       </nav>
+      </div>
     );
   }
 }

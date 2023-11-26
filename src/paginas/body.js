@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Body = () => {
   return (
     
-    <div>
+    <div className='body-home'>
          <br></br>
          <br></br>
       <h1>Hola! ¿Como podemos ayudarte hoy?</h1>
@@ -19,11 +19,16 @@ const Body = () => {
         </button>
         <button className="neumorphic">
           <i className="fa-light fa-dna"></i>
-          <span>Encuentra Centros de Ayuda</span>
+          <span>
+        <Link to="/Maps">Encuentra centros de ayuda</Link>
+      </span>
         </button>
         <button className="neumorphic">
           <i className="fa-light fa-chart-mixed"></i>
-          <span>Contenido Didactico!!</span>
+          <span>
+        <Link to="/Contenido">Contenido didactico</Link>
+      </span>
+          
         </button>
         <button className="neumorphic">
           <i className="fa-light fa-atom"></i>

@@ -8,20 +8,18 @@ import QuotesContainer from './paginas/apis/frasesinsp';
 import RedditPosts from './paginas/apis/subreddit';
 import AboutUs from '../src/paginas/about';
 import Login from './paginas/loginpag/login';
+import MapComponent from './paginas/apis/mapscript';
+// import TwineGame from './paginas/game';
+import Contenidos from './paginas/game';
 
 const Content = () => {
   return (
     <div className="content">
       <Navbar />
       <Header />
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+    
       <Body />
-      <br></br>
-      <br></br>
-      <br></br>
+    
       <QuotesContainer />
     </div>
   );
@@ -33,11 +31,15 @@ const App = () => {
       <div className="App">
         <Routes>
           <Route path="/Home" element={<Content />} />
+          <Route path="/Maps" element={<MapComponent />} />
+          <Route path="/Contenido" element={<Contenidos />} />
           <Route path="/about" element={
             <>
               <Navbar />
               <Header />
               <AboutUs />
+              <Footer />
+              
             </>
           } />
           <Route path="/Foro" element={
@@ -45,6 +47,7 @@ const App = () => {
               <Navbar />
               <Header />
               <RedditPosts />
+                 <Footer />
             </>
           } />
 
@@ -53,7 +56,7 @@ const App = () => {
 
           {/* Agrega más rutas aquí */}
         </Routes>
-        <Footer />
+     
       </div>
     </Router>
   );

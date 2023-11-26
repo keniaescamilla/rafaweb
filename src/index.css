@@ -86,9 +86,7 @@ html, body {
 	letter-spacing: 1px;
 	text-transform: uppercase;
   } @media(max-width: 768px) {
-	  .logo {
-  /*       margin-left: 5px; */
-	  }
+	
 	}
   
   #navbar ul {

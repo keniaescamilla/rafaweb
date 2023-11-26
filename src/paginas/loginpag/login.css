@@ -2,7 +2,7 @@
 .body-login {
 
   margin: 0;
-  width: 100vw;
+  width: 50vw;
   height: 100vh;
   background: #ecf0f3;
   display: flex;
@@ -13,8 +13,12 @@
   overflow: hidden;
   font-family: poppins;
 }
+body{
+  background-image:url("https://scontent.fisj1-1.fna.fbcdn.net/v/t39.30808-6/404328496_2010941009261795_5688797441668348477_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Fu9IvpN34n4AX8NfebY&_nc_ht=scontent.fisj1-1.fna&oh=00_AfAllm6lUdqeew7reqZww96dO5J3Sn3u3u5xNdhYuVp_MA&oe=65678ACE");
+  background-size: contain;
 
-.container {
+}
+/* .container {
   position: relative;
   width: 350px;
   height: 500px;
@@ -23,10 +27,10 @@
   box-sizing: border-box;
   background: #ecf0f3;
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
-}
+} */
 
 .container-login {
-
+padding-left: 10rem;
   width: 350px;
   height: 500px;
   border-radius: 20px;
@@ -37,9 +41,10 @@
 }
 
 .brand-logo {
-  height: 100px;
-  width: 100px;
-  background: url("https://img.icons8.com/color/100/000000/twitter--v2.png");
+  height: 160px;
+  width: 160px;
+  background: url("https://cdn-icons-png.flaticon.com/512/4305/4305260.png");
+background-size: 10rem;
   margin: auto;
   border-radius: 50%;
   box-sizing: border-box;
