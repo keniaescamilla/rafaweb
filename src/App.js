@@ -17,6 +17,7 @@ import InternetArchive from './paginas/apis/libros';
 import YouTubeVideo from './paginas/apis/videos';
 import DiarioForm from './paginas/apis/diario';
 import DiarioList from './paginas/apis/obtenerdiario';
+import Chat from './paginas/chat/chat'
 
 
 const Content = () => {
@@ -107,9 +108,12 @@ const App = () => {
           {/* Ruta de login sin Navbar, Header ni Footer */}
           <Route path="/login" element={<Login />} />
 
+
+          <Route path="/chat" element={<Chat />} />
+
           {/* Agrega más rutas aquí */}
         </Routes>
-      )}
+      
     </div>
   </Router>
 );

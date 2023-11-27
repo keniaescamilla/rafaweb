@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-ro
 import Body from '../paginas/body';
 import AboutUs from '../paginas/about';
 import RedditPosts from '../paginas/apis/subreddit';
-
+import Chat from '../paginas/chat/chat'
 
 
 function RouterComponent() {
@@ -63,8 +63,11 @@ function RouterComponent() {
           {/* Página de MedicationTable */}
           {isLoggedIn ? <RedditPosts /> : <Redirect to="/Foro" />}
         </Route>
-        
-        {/* Otras rutas de tu aplicación */}
+        <Route exact path="/chat">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? <Chat /> : <Redirect to="/chat" />}
+        </Route>
+      
       </Switch>
     </Router>
   );
