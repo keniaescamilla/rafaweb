@@ -17,6 +17,7 @@ import InternetArchive from './paginas/apis/libros';
 import YouTubeVideo from './paginas/apis/videos';
 import DiarioForm from './paginas/apis/diario';
 import DiarioList from './paginas/apis/obtenerdiario';
+import ContactUs from './paginas/apis/contactanos';
 
 
 const Content = () => {
@@ -67,6 +68,7 @@ const App = () => {
           } />
           <Route path="/Meds" element={<TusMedicamentos />} />
           <Route path="/Tests" element={<Tests />} />
+          <Route path="/Contact" element={<ContactUs/>} />
           <Route
             path="/about"
             element={
@@ -109,7 +111,7 @@ const App = () => {
 
           {/* Agrega más rutas aquí */}
         </Routes>
-      )}
+      
     </div>
   </Router>
 );

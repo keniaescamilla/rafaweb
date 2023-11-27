@@ -39,6 +39,10 @@ const TusMedicamentos = () => {
 
   return (
     <div>
+      <p>Comprender la importancia de tus medicamentos y cómo funcionan
+         puede aumentar tu motivación para seguir el tratamiento de manera
+          consistente. Además, al conocer tus medicamentos, puedes estar alerta sobre posibles
+           interacciones con otros fármacos, suplementos o alimentos, así como sobre posibles contraindicaciones que podrían surgir debido a tu historial médico o condiciones específicas.</p>
       <h1>Buscar Medicamentos:</h1>
       <input
         type="text"
