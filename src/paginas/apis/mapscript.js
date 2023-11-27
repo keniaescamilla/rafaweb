@@ -1,23 +1,30 @@
 import React, { useEffect } from 'react';
 
 const MapComponent = () => {
-  let map;
-
   useEffect(() => {
     const initMap = () => {
-      const myLatLng = { lat: -34.397, lng: 150.644 };
-      const mapOptions = {
-        zoom: 8,
-        center: myLatLng,
-      };
-      
-      map = new window.google.maps.Map(document.getElementById("map"), mapOptions);
-      
-      const marker = new window.google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        title: "Hello World!",
-      });
+      try{
+      if (window.google && window.google.maps) {
+        const myLatLng = { lat: -34.397, lng: 150.644 };
+        const mapOptions = {
+          zoom: 8,
+          center: myLatLng,
+          // Puedes agregar opciones de estilo aquí
+        };
+
+        const map = new window.google.maps.Map(document.getElementById("map"), mapOptions);
+
+        const marker = new window.google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: "Hello World!",
+        });
+      } else {
+        console.error("Google Maps API no está cargada correctamente.");
+      }}
+      catch(error){
+        console.log("Error en la funcion initMap ", error)
+      }
     };
 
     // Cargar el script de Google Maps API
@@ -25,12 +32,16 @@ const MapComponent = () => {
     script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBfgYYdDU6WlBQdCcFcRbsAbriVS2AsbcA&callback=initMap`;
     script.async = true;
     script.defer = true;
+    script.onerror = () => {
+      console.error("Error al cargar el script de Google Maps API.");
+    };
     script.onload = () => {
       initMap();
     };
 
     document.body.appendChild(script);
 
+    // Limpiar el script al desmontar el componente
     return () => {
       document.body.removeChild(script);
     };
