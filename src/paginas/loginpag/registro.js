@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import './login.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
-
-function Login() {
+function Registro() {
+    const [usuario, setUsuario] = useState('');
     const [correo, setCorreo] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate(); // Instancia useNavigate
@@ -32,6 +31,14 @@ function Login() {
                 <div className="brand-logo"></div>
                 <div className="brand-title">TSAKIN</div>
                 <form className="inputs" onSubmit={handleLogin}>
+                    <label>USUARIO</label>
+                    <input
+                    type="text"
+                    placeholder="eliga un nombre de usuario"
+                    value={usuario}
+                    onChange={(e) => setUsuario(e.target.value)}
+                    
+                    />
                     <label>EMAIL</label>
                     <input 
                         type="email" 
@@ -46,19 +53,13 @@ function Login() {
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)} 
                     />
-                    <button className='button-login' type="submit">LOGIN</button>
-                    <label>Aun no formas parte? :</label>
-                    <Link to="/Registro">
-        <button className="button-login">
-      <span>
-        <Link to="/Registro">REGISTRATE</Link>
-      </span>
-    </button>
-    </Link>
+                    <button className='button-login' type="submit">REGISTRATE</button>
+                    <label>Ya formas parte? :</label>
+                    <button className='button-login' type="submit">Login</button>
                 </form>
             </div>
         </div>
     );
 }
 
-export default Login;
+export default Registro;

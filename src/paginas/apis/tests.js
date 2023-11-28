@@ -1,5 +1,5 @@
 import React from 'react';
-import './libros.css';
+import './test.css';
 
 function Test() {
   const tests = [
@@ -11,7 +11,7 @@ function Test() {
   ];
 
   return (
-    <div>
+    <div className='container-neumorphic'>
       <h1>Tests Disponibles</h1>
       <ul className='test'>
         {tests.map(test => (

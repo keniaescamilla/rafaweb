@@ -4,9 +4,9 @@ import'./body.css';
 const AboutUs = () => {
 
     return (
-        <div className="card">
+        <div className="card-about">
         <h1>Sobre nosotros</h1>
-        <p>Bienvenidos a Tsakin!
+        <p className="hero">Bienvenidos a Tsakin!
 
 Nuestra historia comienza en las aulas universitarias de México, donde un grupo de jóvenes se unió por un propósito común: enfrentar las dificultades mentales. Experimentamos de primera mano los altibajos emocionales, comprendiendo lo desafiante que puede ser navegar por estos momentos sin la orientación adecuada.
 

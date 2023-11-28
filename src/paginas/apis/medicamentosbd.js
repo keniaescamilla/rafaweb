@@ -38,11 +38,15 @@ const TusMedicamentos = () => {
   };
 
   return (
-    <div>
-      <p>Comprender la importancia de tus medicamentos y cómo funcionan
+    <div className='container-neumorphic'>
+      <h1>Consulta Algun Medicamento</h1>
+      <p className='p-libro'>Comprender la importancia de tus medicamentos y cómo funcionan
          puede aumentar tu motivación para seguir el tratamiento de manera
           consistente. Además, al conocer tus medicamentos, puedes estar alerta sobre posibles
            interacciones con otros fármacos, suplementos o alimentos, así como sobre posibles contraindicaciones que podrían surgir debido a tu historial médico o condiciones específicas.</p>
+           <br></br>
+           <br></br>
+           <br></br>
       <h1>Buscar Medicamentos:</h1>
       <input
         type="text"

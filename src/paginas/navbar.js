@@ -24,7 +24,7 @@ class Navbar extends Component {
           {/* Navbar Logo */}
           <div className="logo">
             {/* Logo Placeholder for Illustration */}
-            <a href="home">
+            <a className='a-home' href="home">
               <i className="fas fa-chess-knight"></i> TSAKIN
             </a>
           </div>

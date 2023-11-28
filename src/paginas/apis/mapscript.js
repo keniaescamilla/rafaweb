@@ -63,7 +63,8 @@ const MapComponent = () => {
 
 
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDpxqx49qpfduYShktgqPZtti8cHpubI2s&callback=initMap&libraries=places`;
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDpxqx49qpfduYShktgqPZtti8cHpubI2s&callback=initMap&libraries=places&sensor=false";
+
     script.async = true;
     script.defer = true;
     script.onerror = () => {

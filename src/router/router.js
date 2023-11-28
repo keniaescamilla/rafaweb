@@ -10,6 +10,7 @@ import TusMedicamentos from '../paginas/apis/medicamentosbd';
 import Tests from '../paginas/apis/tests';
 import DiarioForm from '../paginas/apis/diario';
 import ContactUs from '../paginas/apis/contactanos';
+import Chat from '../paginas/chat/chat'
 
 
 function RouterComponent() {
@@ -73,9 +74,9 @@ function RouterComponent() {
           {/* Página de MedicationTable */}
           {isLoggedIn ? <RedditPosts /> : <Redirect to="/Foro" />}
         </Route>
-        <Route exact path="/Login">
+        <Route exact path="/chat">
           {/* Página de MedicationTable */}
-          {isLoggedIn ? < Login/> : <Redirect to="/Login" />}
+          {isLoggedIn ? <Chat /> : <Redirect to="/chat" />}
         </Route>
         <Route exact path="/Maps">
           {/* Página de MedicationTable */}
@@ -103,6 +104,7 @@ function RouterComponent() {
         </Route>
         
         {/* Otras rutas de tu aplicación */}
+      
       </Switch>
     </Router>
   );

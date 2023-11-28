@@ -11,6 +11,7 @@ html, body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+
 	
   }
   
@@ -25,8 +26,6 @@ html, body {
 	background-color: #ca6c8b;
 	color: #fff;
 	text-align: center;
-	padding: 20px;
-	
 	bottom: 0;
 	width: 100%;
   }
@@ -350,4 +349,7 @@ html, body {
 	color: rgb(28, 121, 184);
 	-webkit-transition: color 0.3s ease;
 	transition: color 0.3s ease;
+  }
+  .a-home{
+	color: black;
   }
