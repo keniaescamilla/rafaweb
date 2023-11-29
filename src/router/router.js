@@ -4,7 +4,7 @@ import Body from '../paginas/body';
 import AboutUs from '../paginas/about';
 import RedditPosts from '../paginas/apis/subreddit';
 import Chat from '../paginas/chat/chat'
-
+import Chetos from '../paginas/chat/chetos'
 
 function RouterComponent() {
   // Simula el estado de inicio de sesión
@@ -68,6 +68,10 @@ function RouterComponent() {
           {isLoggedIn ? <Chat /> : <Redirect to="/chat" />}
         </Route>
       
+        <Route exact path="/chetos">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? <Chetos /> : <Redirect to="/chetos" />}
+        </Route>
       </Switch>
     </Router>
   );

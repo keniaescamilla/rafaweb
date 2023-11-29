@@ -18,6 +18,7 @@ import YouTubeVideo from './paginas/apis/videos';
 import DiarioForm from './paginas/apis/diario';
 import DiarioList from './paginas/apis/obtenerdiario';
 import Chat from './paginas/chat/chat'
+import Chetos from './paginas/chat/chetos'
 
 
 const Content = () => {
@@ -110,6 +111,8 @@ const App = () => {
 
 
           <Route path="/chat" element={<Chat />} />
+
+          <Route path="/chetos" element={<Chetos />} />
 
           {/* Agrega más rutas aquí */}
         </Routes>
