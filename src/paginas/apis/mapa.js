@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const MapComponent = () => {
+const MapaInterfaz = () => {
   const mapRef = useRef(null);
   const searchInputRef = useRef(null);
   const markerRef = useRef(null);
@@ -94,4 +94,4 @@ const MapComponent = () => {
   );
 };
 
-export default MapComponent;
+export default MapaInterfaz;

@@ -9,7 +9,7 @@ import QuotesContainer from './paginas/apis/frasesinsp';
 import RedditPosts from './paginas/apis/subreddit';
 import AboutUs from '../src/paginas/about';
 import Login from './paginas/loginpag/login';
-import MapComponent from './paginas/apis/mapscript';
+import MapComponent from './paginas/apis/mapainterfaz';
 import Tests from './paginas/apis/tests';
 import Contenidos from './paginas/game';
 import TusMedicamentos from './paginas/apis/medicamentosbd';
@@ -19,8 +19,8 @@ import DiarioForm from './paginas/apis/diario';
 import DiarioList from './paginas/apis/obtenerdiario';
 import ContactUs from './paginas/apis/contactanos';
 import Chat from './paginas/chat/chat'
-import Rutinas from './paginas/apis/mappan';
 import Registro from './paginas/loginpag/registro';
+import MapaInterfaz from './paginas/apis/mapainterfaz';
 
 
 const Content = () => {
@@ -47,7 +47,7 @@ const App = () => {
           
           </>
           } />
-          <Route path="/Maps" element={<MapComponent />} />
+          <Route path="/Maps" element={<MapaInterfaz/>} />
           <Route path="/Contenido" element={
           <>
           <Navbar />

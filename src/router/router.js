@@ -4,13 +4,13 @@ import Body from '../paginas/body';
 import AboutUs from '../paginas/about';
 import RedditPosts from '../paginas/apis/subreddit';
 import Login from '../paginas/loginpag';
-import MapComponent from '../paginas/apis/mapscript';
 import Contenidos from '../paginas/game';
 import TusMedicamentos from '../paginas/apis/medicamentosbd';
 import Tests from '../paginas/apis/tests';
 import DiarioForm from '../paginas/apis/diario';
 import ContactUs from '../paginas/apis/contactanos';
 import Chat from '../paginas/chat/chat'
+import MapaInterfaz from '../paginas/apis/mapainterfaz';
 
 
 function RouterComponent() {
@@ -80,7 +80,7 @@ function RouterComponent() {
         </Route>
         <Route exact path="/Maps">
           {/* Página de MedicationTable */}
-          {isLoggedIn ? < MapComponent/> : <Redirect to="/Maps" />}
+          {isLoggedIn ? < MapaInterfaz/> : <Redirect to="/Maps" />}
         </Route>
         <Route exact path="/Contenidos">
           {/* Página de MedicationTable */}
