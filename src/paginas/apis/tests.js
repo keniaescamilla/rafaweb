@@ -1,37 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import './test.css';
 
-const Tests = () => {
-  const [tests, setTests] = useState([]);
-
-  useEffect(() => {
-    axios.get('http://localhost:3002/tests') 
-      .then(response => {
-        setTests(response.data); 
-      })
-      .catch(error => {
-        console.error('Error al obtener los tests:', error);
-      });
-  }, []);
+function Test() {
+  const tests = [
+    { id: 1, nombre: 'Test de Depresion', url: 'https://pasespana.org/test-personas-altamente-sensibles/?gad_source=1&gclid=CjwKCAiAmZGrBhAnEiwAo9qHiXwx5x509ejQkae3bED6diipxFqmc26tTinQeTuUMjgOuroBLbnWZxoCv8AQAvD_BwE' },
+    
+    { id: 2, nombre: 'Test de Distimia', url: 'https://www.psicologia-online.com/test-de-distimia-4483.html' },
+    { id: 3, nombre: 'Por que estoy feliz y despues triste?', url: 'https://www.psicologia-online.com/por-que-estoy-feliz-y-despues-triste-7093.html' },
+    // Puedes agregar más pruebas aquí
+  ];
 
   return (
-    <div>
-      <h1>Tests Psicológicos:</h1>
-      <ul>
+    <div className='container-neumorphic'>
+      <h1>Tests Disponibles</h1>
+      <ul className='test'>
         {tests.map(test => (
-          <li key={test.id_test}>
-            <img src={test.imagen_test} alt="Imagen del test" />
-            <br></br>
-            {test.nombre_test} - <a href={test.url_test}>Enlace al test</a>
-            <br></br>
-            <br></br>
-            <br></br>
-            
+          <li key={test.id}>
+            <a href={test.url} target="_blank" rel="noopener noreferrer">{test.nombre}</a>
           </li>
         ))}
       </ul>
     </div>
   );
-};
+}
 
-export default Tests;
+export default Test;

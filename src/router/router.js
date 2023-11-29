@@ -3,6 +3,13 @@ import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-ro
 import Body from '../paginas/body';
 import AboutUs from '../paginas/about';
 import RedditPosts from '../paginas/apis/subreddit';
+import Login from '../paginas/loginpag';
+import MapComponent from '../paginas/apis/mapscript';
+import Contenidos from '../paginas/game';
+import TusMedicamentos from '../paginas/apis/medicamentosbd';
+import Tests from '../paginas/apis/tests';
+import DiarioForm from '../paginas/apis/diario';
+import ContactUs from '../paginas/apis/contactanos';
 import Chat from '../paginas/chat/chat'
 import Chetos from '../paginas/chat/chetos'
 
@@ -42,6 +49,10 @@ function RouterComponent() {
               
               <Link to="/Diario">diario personal</Link>
             </li>
+            <li>
+              
+              <Link to="/Contac">Contactanos</Link>
+            </li>
             
           
             {/* Otros enlaces de navegación que desees agregar */}
@@ -67,6 +78,32 @@ function RouterComponent() {
           {/* Página de MedicationTable */}
           {isLoggedIn ? <Chat /> : <Redirect to="/chat" />}
         </Route>
+        <Route exact path="/Maps">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? < MapComponent/> : <Redirect to="/Maps" />}
+        </Route>
+        <Route exact path="/Contenidos">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? <Contenidos /> : <Redirect to="/Contenidos" />}
+        </Route>
+        <Route exact path="/Meds">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? <TusMedicamentos /> : <Redirect to="/Meds" />}
+        </Route>
+        <Route exact path="/Tests">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? <Tests /> : <Redirect to="/Tests" />}
+        </Route>
+        <Route exact path="/Diario">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? <DiarioForm /> : <Redirect to="/Diario" />}
+        </Route>
+        <Route exact path="/Contact">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? <ContactUs/> : <Redirect to="/Contact" />}
+        </Route>
+        
+        {/* Otras rutas de tu aplicación */}
       
         <Route exact path="/chetos">
           {/* Página de MedicationTable */}

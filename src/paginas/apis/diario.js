@@ -71,7 +71,6 @@ Además, te puede ayudar a ensayar la mejor forma de comunicarlo a los demás.</
         Texto:
         <textarea className='text-diario' value={texto} onChange={(e) => setTexto(e.target.value)} />
       </label>
-      <button type="submit">Guardar</button>
     </form>
   );
 };

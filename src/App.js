@@ -17,8 +17,8 @@ import InternetArchive from './paginas/apis/libros';
 import YouTubeVideo from './paginas/apis/videos';
 import DiarioForm from './paginas/apis/diario';
 import DiarioList from './paginas/apis/obtenerdiario';
+import ContactUs from './paginas/apis/contactanos';
 import Chat from './paginas/chat/chat'
-import Chetos from './paginas/chat/chetos'
 
 
 const Content = () => {
@@ -49,6 +49,7 @@ const App = () => {
           <Route path="/Contenido" element={
           <>
           <Navbar />
+        <Header />
         <h1>Contenido didactico</h1>
           <YouTubeVideo />
           <br></br>
@@ -68,7 +69,24 @@ const App = () => {
           </>
           } />
           <Route path="/Meds" element={<TusMedicamentos />} />
-          <Route path="/Tests" element={<Tests />} />
+          <Route path="/Tests" element={
+          <>
+        
+          <HeroEffects />
+          <Tests />
+          <Footer />
+          
+          </>
+          } />
+          <Route path="/Contact" element={
+          
+          <>
+          <Navbar />
+          <Header />
+          <ContactUs/>
+          <Footer />
+          </>
+          } />
           <Route
             path="/about"
             element={
@@ -108,6 +126,7 @@ const App = () => {
 
           {/* Ruta de login sin Navbar, Header ni Footer */}
           <Route path="/login" element={<Login />} />
+          <Route path="/Registro" element={<Registro />} />
 
 
           <Route path="/chat" element={<Chat />} />

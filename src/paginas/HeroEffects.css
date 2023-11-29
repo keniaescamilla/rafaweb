@@ -24,7 +24,8 @@
     width: 100%;
   }
   .heroEffects .title {
-    width: 100%;
+    width: 110%;
+    align-items: center;
   }
   .heroEffects .title .text {
     z-index: 1;
@@ -33,6 +34,7 @@
     color: White;
     padding: 4em;
     background: rgba(223, 166, 166, 0.6);
+    align-items: center;
   }
   .heroEffects .arrow {
     position: fixed;
@@ -58,6 +60,9 @@
     margin-bottom: 0.1em;
     font: 5em/1em;
     color: #fff;
+  }
+  .h1-hero{
+    color: whitesmoke;
   }
   
   p {

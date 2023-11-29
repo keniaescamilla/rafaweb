@@ -2,7 +2,7 @@
     align-self: center;  
     padding: 10rem;
     width: 1000px;
-  height: 800px;
+  height: 900px;
   background-color: #e3e7f8;
   border-radius: 20px;
   box-shadow: 8px 8px 16px #898ab1, -8px -8px 16px #727a8b;
@@ -10,7 +10,7 @@
 }
 h1{
   
-    color: rgb(255, 255, 255);
+    color: rgb(247, 128, 128);
     font-family:Arial, Helvetica, sans-serif;
     font-size: 5rem;
 }
