@@ -79,7 +79,7 @@ export default function Chat() {
   return (
     <MDBContainer fluid className="py-5" style={{ backgroundColor: "#fff" }}>
       <MDBRow className="d-flex justify-content-center">
-        <MDBCol md="10" lg="8" xl="10">
+        <MDBCol md="12">
           <MDBCard id="chat2" style={{ borderRadius: "15px" }}>
             <MDBCardHeader className="d-flex justify-content-between align-items-center p-3">
               <h5 className="mb-0">Chat</h5>
@@ -121,7 +121,7 @@ export default function Chat() {
                         }`}
                       ></span>
                       <span className="role-name">
-                        {msg.role === "user" ? "me" : "psychologist"}
+                        {msg.role === "user" ? "You" : "Psychologist"}
                       </span>
                     </div>
                     <p

@@ -86,25 +86,37 @@
 /* Resto de tus estilos ... */
 
 .welcome-section {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  height: 100vh; /* Hacer que la sección de bienvenida tenga la altura completa de la ventana */
   text-align: center;
-  max-width: 600px; /* Ajusta esto según tus necesidades */
+  padding: 20px; /* Añadir algo de padding si es necesario */
 }
 
 .welcome-image {
-  max-width: 100px; /* Ajusta el tamaño de tu imagen según necesites */
-  margin-bottom: 20px;
+  max-width: 150px; /* Ajusta este valor según el tamaño deseado para tu imagen */
+  margin-bottom: 1rem; /* Espacio debajo de la imagen */
 }
 
 .welcome-title {
-  font-size: 2rem; /* Ajusta el tamaño del título según necesites */
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 0.5rem; /* Espacio debajo del título */
 }
 
 .welcome-description {
-  font-size: 1rem; /* Ajusta el tamaño de la descripción según necesites */
-  color: #666; /* Ajusta el color del texto según tus preferencias */
+  font-size: 1rem;
+  color: #666;
+}
+
+#chat2 {
+  width: 100%; /* Establece el ancho al 100% de su contenedor padre */
+  max-width: 100%; /* Asegúrate de que no sea más grande que su contenedor */
+  /* ... otros estilos ... */
+}
+
+/* Si necesitas ajustar los estilos internos para que también abarquen todo el ancho, hazlo aquí */
+.mdb-card-body, .mdb-card-footer {
+  padding: 0; /* Eliminar el padding si es necesario */
 }

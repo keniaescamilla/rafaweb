@@ -129,7 +129,11 @@ const App = () => {
           <Route path="/Registro" element={<Registro />} />
 
 
-          <Route path="/chat" element={<Chat />} />
+          <Route path="/chat" element={<>
+            <Navbar />
+            <Header />
+            <Chat />
+          </>} />
 
           {/* Agrega más rutas aquí */}
         </Routes>
