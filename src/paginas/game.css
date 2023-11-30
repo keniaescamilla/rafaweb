@@ -22,3 +22,8 @@ body {
 .App-game{
     background-color: rgb(245, 198, 162);
 }
+.boton{
+    width: 100px;
+  text-align: center;
+ 
+}

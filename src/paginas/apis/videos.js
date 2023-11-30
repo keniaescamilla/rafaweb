@@ -4,38 +4,70 @@ import YouTube from 'react-youtube';
 import '../game.css';
 
 const YouTubeVideo = () => {
-  const [videoId, setVideoId] = useState('');
+  const [videos, setVideos] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        'https://www.googleapis.com/youtube/v3/search', {
+          params: {
+            part: 'snippet',
+            key: 'AIzaSyD7QP_BkDPJ5UkrwfreeDwSUyIiiRlAZxY',
+            q: searchQuery,
+            maxResults: 1,
+            type: 'video',
+            videoCategoryId: '27' // Category ID for Education
+          }
+        }
+      );
+
+      const { items } = response.data;
+      if (items.length > 0) {
+        setVideos(items);
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          'https://www.googleapis.com/youtube/v3/videos', {
-            params: {
-              part: 'snippet',
-              key: 'AIzaSyD7QP_BkDPJ5UkrwfreeDwSUyIiiRlAZxY', 
-              id: 'IqIRXf4k7JE' 
-            }
-          }
-        );
-
-        const { items } = response.data;
-        if (items.length > 0) {
-          setVideoId(items[0].id);
-        }
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
     fetchData();
-  }, []);
+  }, [searchQuery]);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    fetchData();
+  };
+
+  const opts = {
+    height: '390',
+    width: '640',
+    playerVars: {
+      autoplay: 0,
+    },
+  };
 
   return (
-    <div className='container-neumorphic'>
-      {videoId && <YouTube videoId={videoId} />}
-      <br></br>
-    
+    <div>
+      <form onSubmit={handleSearch}>
+        <input
+          type="text"
+          placeholder="busca videos de psicologia"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <button className='boton'type="submit">Search</button>
+      </form>
+      <br />
+      {videos.map((video) => (
+        <div key={video.id.videoId}>
+          <YouTube videoId={video.id.videoId} opts={opts} />
+          <h3>{video.snippet.title}</h3>
+          <p>{video.snippet.description}</p>
+          <hr />
+        </div>
+      ))}
     </div>
   );
 };

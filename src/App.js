@@ -62,6 +62,7 @@ const App = () => {
           } />
           <Route path="/Contenido" element={
           <>
+          <div className="body-foro">
           <Navbar />
         <Header />
         <h1>Contenido didactico</h1>
@@ -80,7 +81,9 @@ const App = () => {
           <br></br>
           <br></br>
           <Footer />
+          </div>
           </>
+
           } />
           <Route path="/Meds" element={
           <>

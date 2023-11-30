@@ -13,14 +13,14 @@ const Body = () => {
       <br></br>
       <br></br>
       <div className="buttons">
-        <button className="neumorphic active">
+        <button className="neumorphic ">
           <i className="fa fa-comments"></i>
           <span> <Link to="/chat">chat con psicologo IA</Link></span>
         </button>
         <button className="neumorphic">
           <i className="fa fa-map-marker"></i>
           <span>
-        <Link to="/Maps">Encuentra centros de ayuda</Link>
+        <Link to="/Maps">Mapa</Link>
       </span>
         </button>
         <button className="neumorphic">
@@ -58,13 +58,13 @@ const Body = () => {
         <button className="neumorphic">
         <i class="fa fa-users" aria-hidden="true"></i>
       <span>
-        <Link to="/Foro">Foro</Link>
+        <Link to="/Foro">Foro De Reddit</Link>
       </span>
     </button>
     </Link>
     <Link to="/Diario">
         <button className="neumorphic">
-      <i className="fa fa-book"></i>
+      <i className="fa fa-book" ></i>
       <span>
         <Link to="/Diario"> Tu Diario Personal</Link>
       </span>

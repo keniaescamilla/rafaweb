@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './reddit.css'; // Asegúrate de tener un archivo CSS asociado
 
 const RedditPosts = () => {
-  const subreddit = 'psychology'; // Reemplaza 'nombre_del_subreddit' con el nombre del subreddit que desees
+  const subreddit = 'psicologia'; // Reemplaza 'nombre_del_subreddit' con el nombre del subreddit que desees
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -17,6 +17,7 @@ const RedditPosts = () => {
   }, [subreddit]);
 
   return (
+    <div className='body-foro'>
     <div className="reddit-posts">
       <h1>Posts de r/{subreddit}</h1>
       <ul className="post-list">
@@ -26,6 +27,7 @@ const RedditPosts = () => {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 };
