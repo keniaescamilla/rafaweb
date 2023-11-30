@@ -13,9 +13,10 @@ import { Scrollbars } from "react-custom-scrollbars";
 
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "./chat.css";
+import welcomeImage from "../../imagenes/koko.png";
 
 export default function Chat() {
-  const API_KEY = "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"; // Reemplaza con tu API key
+  const API_KEY = "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"; // Reemplaza con tu API key
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
@@ -40,44 +41,41 @@ export default function Chat() {
   };
 
   const sendMessage = async () => {
-    if (!newMessage.trim()) return;
+    if (!newMessage.trim()) return; // No enviar mensajes vacíos.
 
     const userMessage = {
       role: "user",
       content: newMessage.trim(),
     };
 
-    const waitingMessage = {
-      role: "waiting",
-      content: "Waiting for a response...",
-    };
+    // Agrega el mensaje del usuario al estado.
+    setMessages((currentMessages) => [...currentMessages, userMessage]);
 
-    setMessages((messages) => [...messages, userMessage, waitingMessage]);
-
-    setNewMessage("");
-
+    // Aquí es donde normalmente enviarías el mensaje al backend o a la API de OpenAI.
     try {
       const aiResponse = await getAIResponse(newMessage);
-      setMessages((messages) => {
-        // Elimina el mensaje de espera y agrega la respuesta de la IA.
-        return [
-          ...messages.filter((msg) => msg.role !== "waiting"),
-          { role: "assistant", content: aiResponse },
-        ];
-      });
+
+      // Agrega la respuesta de la IA al estado.
+      setMessages((currentMessages) => [
+        ...currentMessages,
+        { role: "assistant", content: aiResponse },
+      ]);
     } catch (error) {
       console.error("Error al enviar mensaje:", error);
-      // Reemplaza el mensaje de espera con un mensaje de error.
-      setMessages((messages) => [
-        ...messages.filter((msg) => msg.role !== "waiting"),
+      // Manejo de errores, por ejemplo, agregar un mensaje de error al chat.
+      setMessages((currentMessages) => [
+        ...currentMessages,
         { role: "assistant", content: "Error getting response" },
       ]);
     }
+
+    // Limpia el mensaje actual y oculta la sección de bienvenida.
+    setNewMessage("");
+    setIsWelcomeVisible(false);
   };
 
-
   return (
-    <MDBContainer fluid className="py-5" style={{ backgroundColor: "#404039" }}>
+    <MDBContainer fluid className="py-5" style={{ backgroundColor: "#fff" }}>
       <MDBRow className="d-flex justify-content-center">
         <MDBCol md="10" lg="8" xl="10">
           <MDBCard id="chat2" style={{ borderRadius: "15px" }}>
@@ -90,19 +88,52 @@ export default function Chat() {
               style={{ position: "relative", height: "500px" }}
             >
               <MDBCardBody>
-  {messages.map((msg, index) => (
-    <div key={index} className={`message ${msg.role}`}>
-      <div className="message-header">
-        <span className="status-dot"></span>
-        <span className="role-name">{msg.role === "user" ? "me" : "koko"}</span>
-      </div>
-      <p className={`message-content ${msg.role === "user" ? "user-message" : msg.role === "assistant" ? "assistant-message" : "waiting-message"}`}>
-        {msg.content}
-      </p>
-    </div>
-  ))}
-</MDBCardBody>
+                {isWelcomeVisible && (
+                  <div className="welcome-section d-flex flex-column align-items-center justify-content-center">
+                    <img
+                      src={welcomeImage}
+                      alt="Koko"
+                      className="welcome-image"
+                    />
+                    <h1 className="welcome-title">Koko</h1>
+                    <p className="welcome-description">
+                      Chat empático para apoyo y bienestar emocional, enfocado
+                      en escuchar y compartir recursos.
+                    </p>
+                  </div>
+                )}
 
+                {messages.map((msg, index) => (
+                  <div
+                    key={index}
+                    className={`d-flex flex-column ${
+                      msg.role === "user"
+                        ? "align-items-end"
+                        : "align-items-start"
+                    } mb-4`}
+                  >
+                    <div className="message-header">
+                      <span
+                        className={`status-dot ${
+                          msg.role === "user" ? "user-img" : "assistant-img"
+                        }`}
+                      ></span>
+                      <span className="role-name">
+                        {msg.role === "user" ? "me" : "psychologist"}
+                      </span>
+                    </div>
+                    <p
+                      className={`message-content ${
+                        msg.role === "user"
+                          ? "user-message"
+                          : "assistant-message"
+                      }`}
+                    >
+                      {msg.content}
+                    </p>
+                  </div>
+                ))}
+              </MDBCardBody>
             </Scrollbars>
 
             <MDBCardFooter className="text-muted d-flex justify-content-start align-items-center p-3">

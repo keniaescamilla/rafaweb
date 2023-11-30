@@ -19,11 +19,6 @@ import DiarioForm from './paginas/apis/diario';
 import DiarioList from './paginas/apis/obtenerdiario';
 import ContactUs from './paginas/apis/contactanos';
 import Chat from './paginas/chat/chat'
-import Registro from './paginas/loginpag/registro';
-import MapaInterfaz from './paginas/apis/mapainterfaz';
-import Headerchat from './paginas/headerchat';
-import HeaderMaps from './paginas/headermaps';
-
 
 
 const Content = () => {
@@ -153,19 +148,9 @@ const App = () => {
           <Route path="/Registro" element={<Registro />} />
 
 
-          <Route path="/chat" element={
-          <>
-          <Navbar />
-          <br></br>
-          <br></br>
-          <br></br>
-          <Headerchat />
-          <Chat />
-          <Footer/>
-          </>
-          } />
+          <Route path="/chat" element={<Chat />} />
 
-          
+          <Route path="/chetos" element={<Chetos />} />
 
           {/* Agrega más rutas aquí */}
         </Routes>
