@@ -12,6 +12,7 @@ import ContactUs from '../paginas/apis/contactanos';
 import Chat from '../paginas/chat/chat'
 import MapaInterfaz from '../paginas/apis/mapainterfaz';
 
+import Chetos from '../paginas/chat/chetos'
 
 function RouterComponent() {
   // Simula el estado de inicio de sesión
@@ -105,6 +106,10 @@ function RouterComponent() {
         
         {/* Otras rutas de tu aplicación */}
       
+        <Route exact path="/chetos">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? <Chetos /> : <Redirect to="/chetos" />}
+        </Route>
       </Switch>
     </Router>
   );

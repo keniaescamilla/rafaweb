@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const TusMedicamentos = () => {
-  const [medicamentos, setMedicamentos] = useState([]);
+  const [new_table, setMedicamentos] = useState([]);
   const [busqueda, setBusqueda] = useState('');
   const [resultados, setResultados] = useState([]);
 
@@ -21,8 +21,8 @@ const TusMedicamentos = () => {
   };
 
   const buscarMedicamento = medicamentoNombre => {
-    const resultado = medicamentos.find(
-      medicamento => medicamento.medicamentos === medicamentoNombre
+    const resultado = new_table.find(
+      new_table => new_table.nombre === medicamentoNombre
     );
     if (resultado) {
       setResultados([resultado]);
@@ -57,10 +57,10 @@ const TusMedicamentos = () => {
         onKeyPress={handleKeyPress}
       />
       <datalist id="sugerencias">
-        {medicamentos.map(medicamento => (
+        {new_table.map(medicamento => (
           <option
             key={medicamento.id_meds}
-            value={medicamento.medicamentos}
+            value={medicamento.nombre}
             onClick={() => buscarMedicamento(medicamento.medicamentos)}
           />
         ))}
@@ -70,7 +70,7 @@ const TusMedicamentos = () => {
       <ul>
         {resultados.map(medicamento => (
           <li key={medicamento.id_meds}>
-            {medicamento.medicamentos} - {medicamento.descripcion}
+            {medicamento.nombre} - {medicamento.descripcion} - {medicamento.formula} - {medicamento.efectos} - {medicamento.otros_nombres}
           </li>
         ))}
       </ul>

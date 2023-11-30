@@ -20,6 +20,7 @@
     padding: 16px;
     width: 700px;
     text-align: center;
+    align-items: center;
     
   }
   
@@ -57,5 +58,8 @@
   .test{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 4rem;
-    color: rgb(112, 119, 216);
+    color: rgb(140, 112, 216);
+  }
+  .ul-libro{
+    text-align: center;
   }

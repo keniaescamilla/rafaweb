@@ -1,0 +1,32 @@
+.modal {
+      /* Define tus estilos para el fondo del modal aquí */
+    }
+    
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      /* Otros estilos para el contenido del modal */
+    }
+    
+    h2 {
+      /* Estilo para el encabezado */
+    }
+    
+    .upload-instructions {
+      margin: 20px 0;
+      /* Estilos adicionales para las instrucciones de carga */
+    }
+    
+    .button-thanks {
+      background-color: pink;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      /* Otros estilos para el botón */
+    }
+    
+    /* Estilos para enlaces, texto y otros elementos según sea necesario */
+    

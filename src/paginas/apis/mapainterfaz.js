@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-
+import './maps.css';
 const MapaInterfaz = () => {
   const mapRef = useRef(null);
   const searchInputRef = useRef(null);
@@ -115,6 +115,9 @@ const MapaInterfaz = () => {
         placeholder="Buscar ubicación"
         style={{ width: '100%', marginBottom: '10px' }}
       />
+      <br></br>
+      <br></br>
+      <br></br>
       <div ref={mapRef} style={{ width: '100%', height: '400px' }} />
     </div>
   );

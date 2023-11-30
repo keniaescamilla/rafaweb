@@ -21,6 +21,9 @@ import ContactUs from './paginas/apis/contactanos';
 import Chat from './paginas/chat/chat'
 import Registro from './paginas/loginpag/registro';
 import MapaInterfaz from './paginas/apis/mapainterfaz';
+import Headerchat from './paginas/headerchat';
+import HeaderMaps from './paginas/headermaps';
+
 
 
 const Content = () => {
@@ -47,7 +50,17 @@ const App = () => {
           
           </>
           } />
-          <Route path="/Maps" element={<MapaInterfaz/>} />
+          <Route path="/Maps" element={
+          <>
+          <Navbar />
+          <br></br>
+          <br></br>
+          <br></br>
+          <HeaderMaps/>
+          <MapaInterfaz/>
+          <Footer />
+          </>
+          } />
           <Route path="/Contenido" element={
           <>
           <Navbar />
@@ -70,7 +83,16 @@ const App = () => {
           <Footer />
           </>
           } />
-          <Route path="/Meds" element={<TusMedicamentos />} />
+          <Route path="/Meds" element={
+          <>
+          <Navbar />
+          <br></br>
+          <br></br>
+          <br></br>
+          <TusMedicamentos />
+          <Footer />
+          </>
+          } />
           <Route path="/Tests" element={
           <>
         
@@ -131,7 +153,19 @@ const App = () => {
           <Route path="/Registro" element={<Registro />} />
 
 
-          <Route path="/chat" element={<Chat />} />
+          <Route path="/chat" element={
+          <>
+          <Navbar />
+          <br></br>
+          <br></br>
+          <br></br>
+          <Headerchat />
+          <Chat />
+          <Footer/>
+          </>
+          } />
+
+          
 
           {/* Agrega más rutas aquí */}
         </Routes>
