@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const { OpenAI } = require('openai');
 
+
 // Inicializa la aplicación Express
 const app = express();
 

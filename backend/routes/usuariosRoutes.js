@@ -31,4 +31,6 @@ router.delete("/:id_usuario", usuariosControllers.eliminarUsuarioPorId);
 
 router.post("/login", usuariosControllers.login);
 
+router.get('/me', usuariosControllers.obtenerUsuarioPorToken);
+
 module.exports = router;

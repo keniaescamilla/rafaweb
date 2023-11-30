@@ -103,6 +103,40 @@ const login = (req, res) => {
 
 
 
+const jwt = require('jsonwebtoken');
+
+// ...otros controladores
+
+// Controlador para obtener los detalles del usuario basado en el token de sesión
+const obtenerUsuarioPorToken = (req, res) => {
+  // Extrae el token de la cabecera de autorización
+  const token = req.headers.authorization.split(' ')[1]; // "Bearer TOKEN"
+
+  // Verifica el token utilizando tu clave secreta
+  jwt.verify(token, 'tu_clave_secreta', (error, decoded) => {
+    if (error) {
+      return res.status(403).json({ error: 'Token inválido o expirado' });
+    }
+
+    // Utiliza el ID de usuario decodificado del token para obtener los detalles del usuario
+    const idUsuario = decoded.idUsuario;
+    connection.query('SELECT * FROM usuario WHERE id_usuario = ?', [idUsuario], (error, results) => {
+      if (error) {
+        console.error("Error al obtener el usuario", error);
+        return res.status(500).json({ error: "Error al obtener el usuario" });
+      }
+
+      if (results.length > 0) {
+        // Si encontramos al usuario, devolvemos sus detalles (sin la contraseña)
+        const {password, ...usuarioSinPassword} = results[0];
+        return res.json(usuarioSinPassword);
+      } else {
+        return res.status(404).json({ error: "Usuario no encontrado" });
+      }
+    });
+  });
+};
+
 
 
 module.exports = {
@@ -112,4 +146,5 @@ module.exports = {
   actualizarUsuarioPorId,
   eliminarUsuarioPorId,
   login,
+  obtenerUsuarioPorToken,
 };
