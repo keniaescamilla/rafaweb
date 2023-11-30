@@ -11,6 +11,7 @@ import DiarioForm from '../paginas/apis/diario';
 import ContactUs from '../paginas/apis/contactanos';
 import Chat from '../paginas/chat/chat'
 import MapaInterfaz from '../paginas/apis/mapainterfaz';
+import ComponenteCalendario from '../paginas/apis/ComponenteCalendar';
 
 import Chetos from '../paginas/chat/chetos'
 
@@ -102,6 +103,10 @@ function RouterComponent() {
         <Route exact path="/Contact">
           {/* Página de MedicationTable */}
           {isLoggedIn ? <ContactUs/> : <Redirect to="/Contact" />}
+        </Route>
+        <Route exact path="/Agenda">
+          {/* Página de MedicationTable */}
+          {isLoggedIn ? <ComponenteCalendario/> : <Redirect to="/Agenda" />}
         </Route>
         
         {/* Otras rutas de tu aplicación */}

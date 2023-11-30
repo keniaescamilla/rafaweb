@@ -74,6 +74,8 @@ export default function Chat() {
     setIsWelcomeVisible(false);
   };
 
+  const [isWelcomeVisible, setIsWelcomeVisible] = useState(true);
+
   return (
     <MDBContainer fluid className="py-5" style={{ backgroundColor: "#fff" }}>
       <MDBRow className="d-flex justify-content-center">
