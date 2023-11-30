@@ -38,10 +38,14 @@ const Body = () => {
       </span>
     </button>
     </Link>
+    <Link to="/Tests">
         <button className="neumorphic">
-          <i className="fa-light fa-seedling"></i>
-          <span>Mi Agenda</span>
-        </button>
+      <i className="fa-light fa-disease"></i>
+      <span>
+        <Link to="/Agenda">Mi agenda</Link>
+      </span>
+    </button>
+    </Link>
         <Link to="/Meds">
         <button className="neumorphic">
       <i className="fa-light fa-disease"></i>

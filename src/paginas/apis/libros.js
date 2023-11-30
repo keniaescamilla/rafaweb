@@ -24,7 +24,7 @@ const InternetArchive = () => {
     <div className='container-neumorphic'>
       <h1>Libros de autoayuda en Internet Archive</h1>
       <div className='card'>
-        <ul>
+        <ul className='ul-libro'>
           {books.map((book, index) => (
             <li key={index}>
               <p className='p-libro'>{book.title}</p>

@@ -133,7 +133,7 @@ h1 {
   display: grid;
   width: min(50rem, 100%);
   margin-inline: auto;
-  grid-template-columns: repeat(auto-fit, minmax(calc((100% - 10rem) / 3), 1fr)); /* Ajuste para mostrar 3 botones por fila */
+  grid-template-columns: repeat(auto-fit, minmax(calc((100% - 10rem) / 4), 1fr)); /* Ajuste para mostrar 3 botones por fila */
   gap: 2rem;
 }
 h2{

@@ -12,7 +12,7 @@
       content: "";
       flex: 1;
       height: 1px;
-      background: #1c1b1b;
+      background: rgb(156, 117, 141) 27, 28);
     }
 
     .user-message {
