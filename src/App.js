@@ -9,7 +9,7 @@ import QuotesContainer from './paginas/apis/frasesinsp';
 import RedditPosts from './paginas/apis/subreddit';
 import AboutUs from '../src/paginas/about';
 import Login from './paginas/loginpag/login';
-import MapComponent from './paginas/apis/mapainterfaz';
+import Contacto from './paginas/apis/contactanos';
 import Tests from './paginas/apis/tests';
 import Contenidos from './paginas/game';
 import TusMedicamentos from './paginas/apis/medicamentosbd';
@@ -105,7 +105,11 @@ const App = () => {
           
           <>
           <Navbar />
-          <Header />
+<br></br>
+<br></br>
+<br></br>
+          <h1>Envianos tu comentario</h1>
+          
           <ContactUs/>
           <Footer />
           </>
@@ -150,7 +154,16 @@ const App = () => {
           {/* Ruta de login sin Navbar, Header ni Footer */}
           <Route path="/login" element={<Login />} />
           <Route path="/Registro" element={<Registro />} />
-          <Route path="/Agenda" element={<ComponenteCalendario />} />
+          <Route path="/Agenda" element={
+          <>
+          <Navbar />
+          <br></br>
+          <br></br>
+          <br></br>
+          <ComponenteCalendario />
+          <Footer />
+          </>
+          } />
 
           <Route path="/chat" element={<>
             <Navbar />
