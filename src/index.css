@@ -1,6 +1,43 @@
+/* Estilos para alinear los elementos a la derecha en la barra de navegación */
+.navbar-right {
+	float: right;
+	display: flex;
+	align-items: center;
+    }
+    
+    .welcome-text {
+	margin-right: 10px; /* Espacio entre el texto de bienvenida y el botón */
+    }
+    
+   /* Añade o ajusta los siguientes estilos según sea necesario */
+.welcome-text {
+	display: inline-block;
+	margin-right: 10px; /* Añade margen si es necesario */
+    }
+    
+    .logout-button {
+	background-color: #DC1BD9; /* Color de fondo del botón */
+	color: white; /* Color del texto del botón */
+	border-radius: 5px;
+	cursor: pointer; /* Cambiar el cursor a puntero */
+	margin: 0 10px; /* Añade margen a los lados del botón si es necesario */
+    }
+    
+    /* Asegúrate de que los estilos del botón no interfieran con los estilos de la lista */
+    #menu .logout-button {
+	font-size: 1em; /* Ajusta el tamaño del texto del botón */
+	line-height: 1; /* Ajusta la altura de la línea si es necesario */
+	vertical-align: middle; /* Alineación vertical para que coincida con los elementos de la lista */
+    }
+    
+    
 
 
 
+
+
+
+    
 /* Estilos generales */
 html, body {
 	height: 100%;

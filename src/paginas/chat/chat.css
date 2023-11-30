@@ -12,7 +12,7 @@
       content: "";
       flex: 1;
       height: 1px;
-      background: rgb(156, 117, 141) 27, 28);
+      background: rgb(156, 117, 141);
     }
 
     .user-message {
@@ -119,4 +119,11 @@
 /* Si necesitas ajustar los estilos internos para que también abarquen todo el ancho, hazlo aquí */
 .mdb-card-body, .mdb-card-footer {
   padding: 0; /* Eliminar el padding si es necesario */
+}
+
+.form-control, .form-control-lg {
+  width: 100%; /* Establece el ancho al 100% del contenedor padre */
+  padding: 10px; /* Añade un poco de padding para que el texto no esté pegado a los bordes */
+  margin: 0; /* Remueve cualquier margen por defecto */
+  box-sizing: border-box; /* Asegúrate de que el padding no afecte el ancho total */
 }

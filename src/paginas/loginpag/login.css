@@ -1,3 +1,33 @@
+.google-login-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 20px;
+    margin: 10px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-login-button:hover {
+    box-shadow: 0 0 6px #4285f4;
+}
+
+.google-login-button:active {
+    background-color: #eeeeee;
+}
+
+.google-login-button > div {
+    margin-right: 10px;
+    background: url('https://logopng.com.br/logos/google-37.png');
+    
+    height: 20px;
+    width: 20px;
+}
+
+
 
 .body-login {
 
@@ -99,7 +129,7 @@ input {
 
 .button-login {
   color: white;
-  margin-top: 20px;
+  margin-top: 10px;
   background: #1DA1F2;
   height: 40px;
   border-radius: 20px;

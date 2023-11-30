@@ -5,8 +5,33 @@ import'../index.css';
 
 class Navbar extends Component {
   state = {
-    menuToggle: false
+    menuToggle: false,
+    isAuthenticated: false,
+    userName: ''
   };
+
+
+  componentDidMount() {
+    const userId = localStorage.getItem('usuarioId');
+    const userName = localStorage.getItem('userName');
+    if (userId && userName) {
+      this.setState({
+        isAuthenticated: true,
+        userName: 'Usuario' 
+      });
+    }
+  }
+  
+  logout = () => {
+    localStorage.removeItem('usuarioId');
+    localStorage.removeItem('userName');
+    this.setState({ isAuthenticated: false, userName: '' });
+    window.location.href = '#login';
+  };
+  
+
+
+
 
   toggleMenu = () => {
     this.setState(prevState => ({
@@ -15,7 +40,7 @@ class Navbar extends Component {
   };
 
   render() {
-    const { menuToggle } = this.state;
+    const { menuToggle, isAuthenticated, userName } = this.state;
 
     return (
       <div className='body-home'>
@@ -34,8 +59,20 @@ class Navbar extends Component {
             <li><a href="home">Home</a></li>
             <li><a href="about">About</a></li>
             <li><a href="Contact">Contact</a></li>
-            <li><a href="Login">Login</a></li>
+            {!isAuthenticated && (
+              <li><a href="Login">Login</a></li>
+            )}
           </ul>
+
+          {/* Sección de bienvenida y botón de cerrar sesión */}
+          {isAuthenticated && (
+            <ul className="navbar-right">
+              <li className="welcome-text">Bienvenido {userName}</li>
+              <li><button onClick={this.logout} className="logout-button">Cerrar Sesión</button></li>
+            </ul>
+          )}
+
+           
         </div>
 
         {/* Menu Icon */}
