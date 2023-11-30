@@ -19,7 +19,7 @@ import DiarioForm from './paginas/apis/diario';
 import DiarioList from './paginas/apis/obtenerdiario';
 import ContactUs from './paginas/apis/contactanos';
 import Chat from './paginas/chat/chat'
-
+import Registro from './paginas/loginpag/registro'
 
 const Content = () => {
   return (
@@ -130,8 +130,6 @@ const App = () => {
 
 
           <Route path="/chat" element={<Chat />} />
-
-          <Route path="/chetos" element={<Chetos />} />
 
           {/* Agrega más rutas aquí */}
         </Routes>

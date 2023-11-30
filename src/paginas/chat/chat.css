@@ -43,12 +43,20 @@
 .status-dot {
   height: 10px;
   width: 10px;
-  background-color: green;
+ /* Fondo verde por defecto */
   border-radius: 50%;
   display: inline-block;
-  margin-right: 0.5rem;
+  background-size: cover;
+  background-position: center;
 }
 
+.user-img {
+  background-image: url(''); /* Añade la URL de la imagen del usuario aquí */
+}
+
+.assistant-img {
+  background-image: url('../../imagenes/koko.png'); /* Añade la URL de la imagen del asistente aquí */
+}
 .role-name {
   display: inline-block;
 }
@@ -61,7 +69,7 @@
 }
 
 .user-message {
-  background-color: #29689b;
+  background-color: #98a2aa;
   align-self: flex-end;
 }
 
@@ -71,8 +79,32 @@
 }
 
 .waiting-message {
-  background-color: grey;
+  background-color: rgb(226, 207, 207);
   align-self: flex-start;
 }
 
 /* Resto de tus estilos ... */
+
+.welcome-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 600px; /* Ajusta esto según tus necesidades */
+}
+
+.welcome-image {
+  max-width: 100px; /* Ajusta el tamaño de tu imagen según necesites */
+  margin-bottom: 20px;
+}
+
+.welcome-title {
+  font-size: 2rem; /* Ajusta el tamaño del título según necesites */
+  margin-bottom: 10px;
+}
+
+.welcome-description {
+  font-size: 1rem; /* Ajusta el tamaño de la descripción según necesites */
+  color: #666; /* Ajusta el color del texto según tus preferencias */
+}
