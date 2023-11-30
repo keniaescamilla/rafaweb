@@ -16,7 +16,7 @@ import "./chat.css";
 import welcomeImage from "../../imagenes/koko.png";
 
 export default function Chat() {
-  const API_KEY = "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"; // Reemplaza con tu API key
+  const API_KEY = ""; // Reemplaza con tu API key
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
