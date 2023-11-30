@@ -1,28 +1,41 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-function ContactUs() {
-  const helpNumbers = [
-    { id: 1, name: 'Línea de ayuda 1', number: '+123456789' },
-    { id: 2, name: 'Línea de ayuda 2', number: '+987654321' },
-    // Puedes agregar más números de ayuda aquí
-  ];
 
-  return (
-    <div>
-      <h2>Contáctanos</h2>
-      <h3>Números de ayuda:</h3>
-      <ul>
-        {helpNumbers.map(help => (
-          <li key={help.id}>
-            <p>
-              <strong>{help.name}: </strong>
-              <a href={`tel:${help.number}`}>{help.number}</a>
-            </p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+const Contacto = () => {
+    const form = useRef();
+
+    const sendEmail = async (e) => {
+        e.preventDefault();
+
+        try {
+            const result = await emailjs.sendForm(
+                'service_gak94aa',
+                'template_f4ixvi8',
+                form.current,
+                'F1NQNTWslW1XX0Bdc'
+            );
+
+            console.log(result.text);
+
+            // Limpiar el formulario después de enviar el correo
+            form.current.reset();
+        } catch (error) {
+            console.error('Error sending email:', error);
+        }
+    };
+
+    return (
+        <form ref={form} onSubmit={sendEmail}>
+            <label>Name</label>
+            <input type="text" name="user_name" />
+            <label>Email</label>
+            <input type="email" name="user_email" />
+            <label >Message</label>
+            <textarea name="message" />
+            <input type="submit" value="Send" />
+        </form>
+    );
 }
 
-export default ContactUs;
+export default Contacto;

@@ -14,17 +14,17 @@ const Body = () => {
       <br></br>
       <div className="buttons">
         <button className="neumorphic active">
-          <i className="fa-light fa-fire"></i>
+          <i className="fa fa-comments"></i>
           <span> <Link to="/chat">chat con psicologo IA</Link></span>
         </button>
         <button className="neumorphic">
-          <i className="fa-light fa-dna"></i>
+          <i className="fa fa-map-marker"></i>
           <span>
         <Link to="/Maps">Encuentra centros de ayuda</Link>
       </span>
         </button>
         <button className="neumorphic">
-          <i className="fa-light fa-chart-mixed"></i>
+          <i className="fa fa-puzzle-piece"></i>
           <span>
         <Link to="/Contenido">Contenido didactico</Link>
       </span>
@@ -38,9 +38,9 @@ const Body = () => {
       </span>
     </button>
     </Link>
-    <Link to="/Tests">
+    <Link to="/Agenda">
         <button className="neumorphic">
-      <i className="fa-light fa-disease"></i>
+      <i className="fa fa-calendar" aria-hidden="true"></i>
       <span>
         <Link to="/Agenda">Mi agenda</Link>
       </span>
@@ -48,7 +48,7 @@ const Body = () => {
     </Link>
         <Link to="/Meds">
         <button className="neumorphic">
-      <i className="fa-light fa-disease"></i>
+      <i className="fa fa-medkit"></i>
       <span>
         <Link to="/Meds">Conoce tus Medicamentos</Link>
       </span>
@@ -56,15 +56,15 @@ const Body = () => {
     </Link>
         <Link to="/Foro">
         <button className="neumorphic">
-      <i className="fa-light fa-disease"></i>
+        <i class="fa fa-users" aria-hidden="true"></i>
       <span>
-        <Link to="/Foro">Foros</Link>
+        <Link to="/Foro">Foro</Link>
       </span>
     </button>
     </Link>
     <Link to="/Diario">
         <button className="neumorphic">
-      <i className="fa-light fa-disease"></i>
+      <i className="fa fa-book"></i>
       <span>
         <Link to="/Diario"> Tu Diario Personal</Link>
       </span>
