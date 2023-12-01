@@ -45,7 +45,7 @@ const DiarioForm = () => {
     localStorage.setItem('savedDate', currentDate.toString());
     localStorage.setItem('deleteAt', deleteAt.toString());
 
-    setNotas([savedData]);
+    setNotas([...notas, savedData]);
     setTitulo('');
     setEstadoAnimo('');
     setTexto('');
@@ -83,35 +83,38 @@ const DiarioForm = () => {
     <div>
       <h1>Escribe Como Te Sientes</h1>
       <p className='p-meds'>
-Por qué es importante expresar lo que sentimos?
-<br></br>
-Muchas veces nos preguntamos por qué es importante expresar lo que sentimos y no guardar esos sentimientos para nosotros mismos.
+  Por qué es importante expresar lo que sentimos?
+  <br></br>
+  Muchas veces nos preguntamos por qué es importante expresar lo que sentimos y no guardar esos sentimientos para nosotros mismos.
 
-Pero cuando comprendemos cómo beneficia nuestra salud mental el mostrar nuestras emociones se disipa cualquier duda.
+  Pero cuando comprendemos cómo beneficia nuestra salud mental el mostrar nuestras emociones se disipa cualquier duda.
 
-Sentir miedo, tristeza, euforia es completamente normal y generalmente esos sentimientos dirigen nuestras acciones.
+  Sentir miedo, tristeza, euforia es completamente normal y generalmente esos sentimientos dirigen nuestras acciones.
 
-Además, exteriorizarlos es importante para el desarrollo de la inteligencia emocional, que nos ayuda a llevar de una mejor manera nuestra vida en los diferentes aspectos.
-Escribe lo que sientas
-Si quieres saber lo que sientes puedes comenzar por escribirlo para luego poder expresarlo.
+  Además, exteriorizarlos es importante para el desarrollo de la inteligencia emocional, que nos ayuda a llevar de una mejor manera nuestra vida en los diferentes aspectos.
+  Escribe lo que sientas
+  Si quieres saber lo que sientes puedes comenzar por escribirlo para luego poder expresarlo.
 
-Además, te puede ayudar a ensayar la mejor forma de comunicarlo a los demás.</p>
+  Además, te puede ayudar a ensayar la mejor forma de comunicarlo a los demás.
+</p>
+
       <form onSubmit={handleSubmit}>
-        <label>
-          Título:
-          <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
-        </label>
-        <label>
-          Estado de ánimo:
-          <input type="text" value={estadoAnimo} onChange={(e) => setEstadoAnimo(e.target.value)} />
-        </label>
-        <label>
-          Texto:
-          <textarea value={texto} onChange={(e) => setTexto(e.target.value)} />
-        </label>
-        <button type="submit">Agregar Nota</button>
-      </form>
-      {tiempoRestante && <p className='p-meds'>Tiempo restante para eliminación: {tiempoRestante}</p>}
+  <label>
+    Título:
+    <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
+  </label>
+  <label>
+    Estado de ánimo:
+    <input type="text" value={estadoAnimo} onChange={(e) => setEstadoAnimo(e.target.value)} />
+  </label>
+  <label>
+    Texto:
+    <textarea value={texto} onChange={(e) => setTexto(e.target.value)} />
+  </label>
+  <button type="submit">Agregar Nota</button>
+</form>
+
+      {tiempoRestante && notas.length > 0 && <p className='p-meds'>Tiempo restante para eliminación: {tiempoRestante}</p>}
       <button onClick={eliminarNotasGuardadas}>Eliminar Notas</button>
       {mensaje && <p>{mensaje}</p>}
       <div>

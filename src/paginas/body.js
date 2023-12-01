@@ -66,7 +66,7 @@ const Body = () => {
         <button className="neumorphic">
       <i className="fa fa-book" ></i>
       <span>
-        <Link to="/Diario"> Tu Diario Personal</Link>
+        <Link to="/Diario"> Escritos Temporales</Link>
       </span>
     </button>
     </Link>
