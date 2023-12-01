@@ -16,60 +16,59 @@ import "./chat.css";
 import welcomeImage from "../../imagenes/koko.png";
 
 export default function Chat() {
-  const API_KEY = ""; // Reemplaza con tu API key
+  const API_KEY = "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";
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
-  const getAIResponse = async (prompt) => {
-    const response = await fetch(`https://api.openai.com/v1/completions`, {
+  const getAIResponse = async (userMessage, previousMessages) => {
+    const messagesForAPI = [
+      ...previousMessages.map((msg) => ({ role: msg.role, content: msg.content })),
+      { role: "user", content: userMessage },
+    ];
+
+    const response = await fetch(`https://api.openai.com/v1/chat/completions`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${API_KEY}`,
       },
       body: JSON.stringify({
-        model: "text-davinci-003",
-        prompt: prompt,
-        max_tokens: 150,
+        model: "gpt-4", // Cambia a "gpt-3.5-turbo" si prefieres usar ese modelo
+        messages: messagesForAPI,
       }),
     });
 
     const data = await response.json();
     return data.choices && data.choices.length > 0
-      ? data.choices[0].text
-      : "No response";
+        ? data.choices[0].message.content
+        : "No response";
   };
 
   const sendMessage = async () => {
-    if (!newMessage.trim()) return; // No enviar mensajes vacíos.
+    if (!newMessage.trim()) return;
 
     const userMessage = {
       role: "user",
       content: newMessage.trim(),
     };
 
-    // Agrega el mensaje del usuario al estado.
     setMessages((currentMessages) => [...currentMessages, userMessage]);
 
-    // Aquí es donde normalmente enviarías el mensaje al backend o a la API de OpenAI.
     try {
-      const aiResponse = await getAIResponse(newMessage);
+      const aiResponse = await getAIResponse(newMessage, messages);
 
-      // Agrega la respuesta de la IA al estado.
       setMessages((currentMessages) => [
         ...currentMessages,
         { role: "assistant", content: aiResponse },
       ]);
     } catch (error) {
       console.error("Error al enviar mensaje:", error);
-      // Manejo de errores, por ejemplo, agregar un mensaje de error al chat.
       setMessages((currentMessages) => [
         ...currentMessages,
         { role: "assistant", content: "Error getting response" },
       ]);
     }
 
-    // Limpia el mensaje actual y oculta la sección de bienvenida.
     setNewMessage("");
     setIsWelcomeVisible(false);
   };
