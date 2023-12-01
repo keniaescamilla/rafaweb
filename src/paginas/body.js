@@ -20,7 +20,7 @@ const Body = () => {
         <button className="neumorphic">
           <i className="fa fa-map-marker"></i>
           <span>
-        <Link to="/Maps">Mapa</Link>
+        <Link to="/Maps">Encuentra Ayuda</Link>
       </span>
         </button>
         <button className="neumorphic">
@@ -42,7 +42,7 @@ const Body = () => {
         <button className="neumorphic">
       <i className="fa fa-calendar" aria-hidden="true"></i>
       <span>
-        <Link to="/Agenda">Mi agenda</Link>
+        <Link to="/Agenda">Tu agenda Personal</Link>
       </span>
     </button>
     </Link>
@@ -58,7 +58,7 @@ const Body = () => {
         <button className="neumorphic">
         <i class="fa fa-users" aria-hidden="true"></i>
       <span>
-        <Link to="/Foro">Foro De Reddit</Link>
+        <Link to="/Foro">Comunidades De Reddit</Link>
       </span>
     </button>
     </Link>
@@ -66,7 +66,7 @@ const Body = () => {
         <button className="neumorphic">
       <i className="fa fa-book" ></i>
       <span>
-        <Link to="/Diario"> Escritos Temporales</Link>
+        <Link to="/Diario"> Escrito Temporal</Link>
       </span>
     </button>
     </Link>

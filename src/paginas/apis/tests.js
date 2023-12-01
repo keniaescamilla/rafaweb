@@ -11,7 +11,7 @@ function Test() {
   ];
 
   return (
-    <div className='container-neumorphic'>
+    <div >
       <h1>Tests Disponibles</h1>
       <ul className='test'>
         {tests.map(test => (

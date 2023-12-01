@@ -33,7 +33,7 @@ const DiarioForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const currentDate = new Date().toLocaleString();
-    const deleteAt = new Date().getTime() + (48 * 60 * 60 * 1000); // 48 horas en milisegundos
+    const deleteAt = new Date().getTime() + (48 * 60 * 60 * 1000); 
     const savedData = {
       titulo,
       estadoAnimo,
@@ -109,7 +109,7 @@ const DiarioForm = () => {
   </label>
   <label>
     Texto:
-    <textarea value={texto} onChange={(e) => setTexto(e.target.value)} />
+    <textarea className='text-diario' value={texto} onChange={(e) => setTexto(e.target.value)} />
   </label>
   <button type="submit">Agregar Nota</button>
 </form>
@@ -123,7 +123,7 @@ const DiarioForm = () => {
           <div key={index}>
             <h1>{nota.titulo}</h1>
             <p className='p-meds'>Fecha de creación: {nota.fechaCreacion}</p>
-            {/* Resto de la visualización de las notas */}
+            
           </div>
         ))}
       </div>

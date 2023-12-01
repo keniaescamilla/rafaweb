@@ -67,7 +67,11 @@ const App = () => {
           <>
           <div className="body-foro">
           <Navbar />
-        
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <h1>Contenido didactico</h1>
           <YouTubeVideo />
           <br></br>
@@ -100,8 +104,10 @@ const App = () => {
           } />
           <Route path="/Tests" element={
           <>
-        
-          <HeroEffects />
+        <br></br>
+        <br></br>
+        <br></br>
+          <Navbar />
           <Tests />
           <Footer />
           
@@ -177,8 +183,9 @@ const App = () => {
 
           <Route path="/chat" element={<>
             <Navbar />
-            <Header />
+          
             <Chat />
+            <Footer />
           </>} />
 
           

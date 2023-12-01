@@ -33,7 +33,7 @@ const HeroEffects = () => {
         <div className="title centerV">
           <div>
             <div className="text">
-              <h1 className='h1-hero'>Bienvenido a Tsakin!</h1>
+              <h1 className='h1-hero'>¡Bienvenido a Ts'akin!</h1>
               <p>"Porque cada mente importa, estamos aquí."</p>
             </div>
           </div>

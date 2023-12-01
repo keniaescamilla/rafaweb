@@ -11,7 +11,7 @@ const InternetArchive = () => {
         const response = await axios.get(
           'https://archive.org/advancedsearch.php?q=subject:autoayuda&output=json'
         );
-        setBooks(response.data.response.docs.slice(0, 5)); // Muestra solo los primeros 5 libros
+        setBooks(response.data.response.docs.slice(0, 20)); // Muestra los primeros 20 libros
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -21,19 +21,17 @@ const InternetArchive = () => {
   }, []);
 
   return (
-    <div >
+    <div>
       <h1>Libros de autoayuda en Internet Archive</h1>
-      <div className='card'>
-        <ul className='ul-libro'>
-          {books.map((book, index) => (
-            <li key={index}>
-              <p className='p-libro'>{book.title}</p>
-              <a href={book.url} target="_blank" rel="noopener noreferrer">
-                Ver en Internet Archive
-              </a>
-            </li>
-          ))}
-        </ul>
+      <div className="card-container">
+        {books.map((book, index) => (
+          <div key={index} className="card">
+            <h3>{book.title}</h3>
+            <a href={book.url} target="_blank" rel="noopener noreferrer">
+              Ver en Internet Archive
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   );

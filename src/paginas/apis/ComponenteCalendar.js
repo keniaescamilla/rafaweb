@@ -33,7 +33,7 @@ const ComponenteCalendario = () => {
   const handleEditClick = (event) => {
     const nuevoTexto = prompt("Ingrese el nuevo nombre de la cita:", event.title);
     if (nuevoTexto) {
-      const eventID = parseInt(event.id); // Convierte el ID del evento a número
+      const eventID = parseInt(event.id); 
       const citasActualizadas = citas.map((cita) =>
         cita.id === eventID ? { ...cita, title: nuevoTexto } : cita
       );
@@ -42,7 +42,7 @@ const ComponenteCalendario = () => {
   };
 
   const handleRemoveClick = (event) => {
-    const eventID = parseInt(event.id); // Convierte el ID del evento a número
+    const eventID = parseInt(event.id);
     const nuevasCitas = citas.filter((cita) => cita.id !== eventID);
     setCitas(nuevasCitas);
   };
@@ -59,7 +59,6 @@ const ComponenteCalendario = () => {
   };
 
 
-  // Función para asignar colores según el estado emocional
   const getColorByEmotion = (emotion) => {
     switch (emotion) {
       case "feliz":
@@ -81,7 +80,7 @@ const ComponenteCalendario = () => {
       <p className="p-meds">Te presentamos una herramienta que Facilita la programación y el seguimiento de 
         las sesiones, consultas, actividades o cualquier evento relevante para su salud mental.
 que ademas le Permitira registrar el estado emocional asociado, brindando la oportunidad de identificar patrones y tendencias en el estado de ánimo a lo largo del tiempo.</p>
-
+<p className="p-meds">Emociones y Colores : feliz: Amarillo, triste: Azul, ansioso: Naranja, enojado: Rojo </p>
       <FullCalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView={"dayGridMonth"}

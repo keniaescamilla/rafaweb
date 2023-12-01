@@ -13,7 +13,7 @@ const YouTubeVideo = () => {
         'https://www.googleapis.com/youtube/v3/search', {
           params: {
             part: 'snippet',
-            key: 'AIzaSyD7QP_BkDPJ5UkrwfreeDwSUyIiiRlAZxY', 
+            key: 'AIzaSyDK42eoXbmLqhdfS3sU9_P84zaquYXOO0U', 
             q: 'psicologia', 
             maxResults: 3,
             type: 'video',
@@ -51,7 +51,7 @@ const YouTubeVideo = () => {
   return (
     <div>
       <form onSubmit={handleSearch}>
-        <input
+        <input className='input-meds'
           type="text"
           placeholder="busca videos de psicologia"
           value={searchQuery}

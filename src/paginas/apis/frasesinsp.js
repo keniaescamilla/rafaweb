@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './quotes.css';
 
-
 const QuoteCard = ({ text, author }) => {
   return (
     <div className="quote-card">
@@ -31,13 +30,36 @@ const QuotesContainer = () => {
     fetchData();
   }, []);
 
+  const translateText = async (text) => {
+    const apiKey = 'AIzaSyDK42eoXbmLqhdfS3sU9_P84zaquYXOO0U'; 
+    const sourceLang = 'en'; 
+    const targetLang = 'es'; 
+
+    try {
+      const translationResponse = await fetch(
+        `https://translation.googleapis.com/language/translate/v2?key=${apiKey}&q=${encodeURI(
+          text
+        )}&source=${sourceLang}&target=${targetLang}`,
+        {
+          method: 'POST',
+        }
+      );
+      const translationData = await translationResponse.json();
+      return translationData.data.translations[0].translatedText;
+    } catch (error) {
+      console.error('Error translating text:', error);
+      return text;
+    }
+  };
+
   useEffect(() => {
-    const interval = setInterval(() => {
+    const interval = setInterval(async () => {
       if (quotes.length > 0) {
         const randomIndex = Math.floor(Math.random() * quotes.length);
-        setCurrentQuote(quotes[randomIndex]);
+        const translatedText = await translateText(quotes[randomIndex].text);
+        setCurrentQuote({ ...quotes[randomIndex], text: translatedText });
       }
-    }, 10000); // Cambiar la cita cada 100 segundos
+    }, 1000000); 
 
     return () => clearInterval(interval);
   }, [quotes]);
@@ -45,9 +67,7 @@ const QuotesContainer = () => {
   return (
     <div className="quotes-container">
       {currentQuote && <QuoteCard text={currentQuote.text} author={currentQuote.author} />}
-      
     </div>
-    
   );
 };
 
