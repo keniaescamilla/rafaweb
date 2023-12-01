@@ -21,7 +21,7 @@ const InternetArchive = () => {
   }, []);
 
   return (
-    <div className='container-neumorphic'>
+    <div >
       <h1>Libros de autoayuda en Internet Archive</h1>
       <div className='card'>
         <ul className='ul-libro'>

@@ -33,12 +33,6 @@
     
 
 
-
-
-
-
-    
-/* Estilos generales */
 html, body {
 	height: 100%;
 	margin: 0;
@@ -53,13 +47,13 @@ html, body {
 	
   }
   
-  /* Estilos del contenido */
+
   .content {
 	flex: 1;
-	/* Aquí puedes añadir estilos adicionales para tu contenido */
+	
   }
   
-  /* Estilos del footer */
+
   .footer {
 	background-color: #ca6c8b;
 	color: #fff;
@@ -76,7 +70,7 @@ html, body {
   
   body {
 	font-family: Lato, Helvetica, Arial, sans-serif;
-	background: none;
+	
   }
   
   a {

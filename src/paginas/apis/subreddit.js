@@ -19,6 +19,7 @@ const RedditPosts = () => {
   return (
     <div className='body-foro'>
     <div className="reddit-posts">
+      <img className='img-redd' src='https://logosmarcas.net/wp-content/uploads/2020/11/Reddit-Emblema.png'></img>
       <h1>Posts de r/{subreddit}</h1>
       <ul className="post-list">
         {posts.map((post, index) => (

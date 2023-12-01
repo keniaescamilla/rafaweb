@@ -22,6 +22,8 @@ import Chat from './paginas/chat/chat'
 import MapaInterfaz from './paginas/apis/mapainterfaz';
 import Registro from './paginas/loginpag/registro';
 import ComponenteCalendario from './paginas/apis/ComponenteCalendar';
+import Rutinas from './paginas/apis/Rutinas';
+import Mapita from './paginas/apis/Mapita';
 
 
 
@@ -42,7 +44,7 @@ const App = () => {
     <Router>
     <div className="App">
         <Routes>
-          <Route path="/Home" element={
+          <Route path="/home" element={
           <>
           <HeroEffects />
           <Content/>
@@ -56,6 +58,7 @@ const App = () => {
           <br></br>
           <br></br>
           {/* <HeaderMaps/> */}
+          {/* <MapaInterfaz/> */}
           <MapaInterfaz/>
           <Footer />
           </>
@@ -64,7 +67,7 @@ const App = () => {
           <>
           <div className="body-foro">
           <Navbar />
-        <Header />
+        
         <h1>Contenido didactico</h1>
           <YouTubeVideo />
           <br></br>
@@ -145,9 +148,13 @@ const App = () => {
           <Route
             path="/Foro"
             element={
-              <>
+              
+            <>
                 <Navbar />
-                <Header />
+                <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
                 <RedditPosts />
                 <Footer />
               </>

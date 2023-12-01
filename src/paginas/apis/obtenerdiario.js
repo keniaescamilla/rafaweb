@@ -32,7 +32,7 @@ const DiarioList = () => {
 
   return (
     <div>
-      <h2>Lista de Escritos</h2>
+      <h2> de Escritos</h2>
       <ul>
         {diario.map((escrito) => (
           <li key={escrito.id_escrito}>

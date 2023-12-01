@@ -13,11 +13,11 @@ const YouTubeVideo = () => {
         'https://www.googleapis.com/youtube/v3/search', {
           params: {
             part: 'snippet',
-            key: 'AIzaSyD7QP_BkDPJ5UkrwfreeDwSUyIiiRlAZxY',
-            q: searchQuery,
-            maxResults: 1,
+            key: 'AIzaSyD7QP_BkDPJ5UkrwfreeDwSUyIiiRlAZxY', 
+            q: 'psicologia', 
+            maxResults: 3,
             type: 'video',
-            videoCategoryId: '27' // Category ID for Education
+            order: 'date', 
           }
         }
       );

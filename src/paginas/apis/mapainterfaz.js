@@ -9,7 +9,7 @@ const MapaInterfaz = () => {
 
   useEffect(() => {
     const initMap = () => {
-      try {
+      
         if (window.google && window.google.maps) {
           const map = new window.google.maps.Map(mapRef.current, {
             zoom: 8,
@@ -81,43 +81,38 @@ const MapaInterfaz = () => {
             });
           });
         } else {
-          console.error('Google Maps API no está cargada correctamente.');
+          console.error('Google Maps API is not loaded correctly.');
         }
-      } catch (error) {
-        console.error('Error en la función initMap ', error);
-      }
     };
 
-    const script = document.createElement('script');
-    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDpxqx49qpfduYShktgqPZtti8cHpubI2s&callback=initMap&libraries=places&sensor=false";
+    const loadGoogleMapsScript = () => {
+      const script = document.createElement('script');
+      const API_KEY = 'AIzaSyDpxqx49qpfduYShktgqPZtti8cHpubI2s'; // Replace with your Google Maps API key
 
-    script.async = true;
-    script.defer = true;
-    script.onerror = () => {
-      console.error('Error al cargar el script de Google Maps API.');
-    };
-    script.onload = () => {
-      initMap();
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap&libraries=places`;
+      script.async = true;
+      script.defer = true;
+
+      window.initMap = initMap; 
+
+      document.body.appendChild(script);
+
+      return () => {
+        document.body.removeChild(script);
+      };
     };
 
-    document.body.appendChild(script);
+    loadGoogleMapsScript();
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  },[]);
 
   return (
     <div>
       <input
         ref={searchInputRef}
-        type="text"
-        placeholder="Buscar ubicación"
+        placeholder="Search location"
         style={{ width: '100%', marginBottom: '10px' }}
       />
-      <br></br>
-      <br></br>
-      <br></br>
       <div ref={mapRef} style={{ width: '100%', height: '400px' }} />
     </div>
   );

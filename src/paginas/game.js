@@ -3,8 +3,8 @@ import './game.css';
 const TwineGame = ({ games }) => {
   return (
  
-    <div className='container-neumorphic'>
-      <h1>Juegos:</h1>
+    <div >
+      <h1>Historias interactivas</h1>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         {games.map((game, index) => (
           <iframe

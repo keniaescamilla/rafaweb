@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './quotes.css'
 
 const TusMedicamentos = () => {
   const [new_table, setMedicamentos] = useState([]);
@@ -7,7 +8,7 @@ const TusMedicamentos = () => {
   const [resultados, setResultados] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/medicamentos')
+    axios.get('http://localhost:3006/medicamentos')
       .then(response => {
         setMedicamentos(response.data);
       })
@@ -38,17 +39,17 @@ const TusMedicamentos = () => {
   };
 
   return (
-    <div className='container-neumorphic'>
-      <h1>Consulta Algun Medicamento</h1>
-      <p className='p-libro'>Comprender la importancia de tus medicamentos y cómo funcionan
-         puede aumentar tu motivación para seguir el tratamiento de manera
+    <div>
+      <h1>Consulta algún medicamento</h1>
+      <p className='p-meds'>Comprender la importancia de tus medicamentos y cómo funcionan puede aumentar tu motivación para seguir el tratamiento de manera
           consistente. Además, al conocer tus medicamentos, puedes estar alerta sobre posibles
            interacciones con otros fármacos, suplementos o alimentos, así como sobre posibles contraindicaciones que podrían surgir debido a tu historial médico o condiciones específicas.</p>
            <br></br>
            <br></br>
            <br></br>
       <h1>Buscar Medicamentos:</h1>
-      <input
+      <div className='body-meds'>
+      <input className='input-meds'
         type="text"
         placeholder="Buscar medicamento"
         value={busqueda}
@@ -56,6 +57,7 @@ const TusMedicamentos = () => {
         list="sugerencias"
         onKeyPress={handleKeyPress}
       />
+      </div>
       <datalist id="sugerencias">
         {new_table.map(medicamento => (
           <option
@@ -69,8 +71,18 @@ const TusMedicamentos = () => {
       <h2>Resultados:</h2>
       <ul>
         {resultados.map(medicamento => (
-          <li key={medicamento.id_meds}>
-            {medicamento.nombre} - {medicamento.descripcion} - {medicamento.formula} - {medicamento.efectos} - {medicamento.otros_nombres}
+         
+          <li className='li-meds' key={medicamento.id_meds}>
+            <div className='img-meds'>
+            <img  src='https://cdn-icons-png.flaticon.com/512/11411/11411396.png'></img>
+            </div>
+           
+          <h3> Medicamento:</h3><br></br> {medicamento.nombre} <br></br><br></br>
+          
+          <h3>Descripcion:</h3><br></br> {medicamento.descripcion} <br></br> <br></br>
+          <h3>Formula:</h3><br></br> {medicamento.formula} <br></br><br></br>
+           <h3>Efectos:</h3><br></br> {medicamento.efectos} <br></br><br></br>
+           <h3> Otros Nombres Con Los Que Los Podrias Encontrar:</h3><br></br>{medicamento.otros_nombres}<br></br><br></br>
           </li>
         ))}
       </ul>

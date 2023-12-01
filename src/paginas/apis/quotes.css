@@ -28,3 +28,34 @@
   p.quote-text{
     font-size: 20px;
   }
+  .img{
+    text-align: center !important;
+    border-radius: 60% !important;
+    display: flex !important;
+   width: 39% !important;
+   height: 39% !important;
+ 
+  }
+  div.li-meds{
+    text-align: center;
+    padding-right: 2rem;
+    padding-left: 15rem;
+    padding-top: 0rem;
+    padding-bottom: 7rem;
+    list-style: none;
+    position: relative;
+    list-style: none;
+    width: 20%;
+    
+  }
+  h3{
+    color: deeppink;
+  }
+  .li-meds{
+    list-style: none;
+    width: 60%;
+    text-align: left;
+    padding-right: 10rem;
+    padding-left: 6rem;
+    
+  }
