@@ -56,11 +56,11 @@ class Navbar extends Component {
 
           {/* Navbar Links */}
           <ul id="menu">
-            <li><a href="home">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li><a href="Contact">Contact</a></li>
+            <li><a href="home">Inicio</a></li>
+            <li><a href="about">Sobre Nosotros</a></li>
+            <li><a href="Contact">Contactanos</a></li>
             {!isAuthenticated && (
-              <li><a href="Login">Login</a></li>
+              <li><a href="Login">Inicio De Sesion</a></li>
             )}
           </ul>
 
