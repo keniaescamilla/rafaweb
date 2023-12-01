@@ -24,7 +24,7 @@ import Registro from './paginas/loginpag/page/registro';
 import ComponenteCalendario from './paginas/apis/ComponenteCalendar';
 import Rutinas from './paginas/apis/Rutinas';
 import Mapita from './paginas/apis/Mapita';
-
+import GoogleBooksAPI from './paginas/apis/googlelibros';
 
 
 const Content = () => {
@@ -57,8 +57,11 @@ const App = () => {
           <br></br>
           <br></br>
           <br></br>
-          {/* <HeaderMaps/> */}
-          {/* <MapaInterfaz/> */}
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <h1>Encuentra Centros De Ayuda Cerca De Ti</h1>
           <MapaInterfaz/>
           <Footer />
           </>
@@ -81,7 +84,8 @@ const App = () => {
           <br></br>
           <br></br>
           <br></br>
-          <InternetArchive />
+          
+          <GoogleBooksAPI />
           <br></br><br></br><br></br>
           <br></br>
           <br></br>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './reddit.css'; // Asegúrate de tener un archivo CSS asociado
+import './reddit.css'; 
 
 const RedditPosts = () => {
-  const subreddit = 'psicologia'; // Reemplaza 'nombre_del_subreddit' con el nombre del subreddit que desees
+  const subreddit = 'psicologia'; 
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {

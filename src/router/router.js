@@ -16,8 +16,8 @@ import ComponenteCalendario from '../paginas/apis/ComponenteCalendar';
 import Chetos from '../paginas/chat/chetos'
 
 function RouterComponent() {
-  // Simula el estado de inicio de sesión
-  const isLoggedIn = false; // Cambia esto según tu lógica de inicio de sesión
+
+  const isLoggedIn = false; 
 
   return (
     <Router>
@@ -57,62 +57,59 @@ function RouterComponent() {
             </li>
             
           
-            {/* Otros enlaces de navegación que desees agregar */}
           </ul>
         </nav>
       </div>
 
       <Switch>
         <Route exact path="/Home">
-          {/* Página de inicio de sesión */}
+         
           {isLoggedIn ? <Redirect to="/Home" /> : <Body />}
         </Route>
 
         <Route exact path="/about">
-          {/* Página de MedicationTable */}
+          
           {isLoggedIn ? <AboutUs /> : <Redirect to="/about" />}
         </Route>
         <Route exact path="/Foro">
-          {/* Página de MedicationTable */}
+         
           {isLoggedIn ? <RedditPosts /> : <Redirect to="/Foro" />}
         </Route>
         <Route exact path="/chat">
-          {/* Página de MedicationTable */}
+        
           {isLoggedIn ? <Chat /> : <Redirect to="/chat" />}
         </Route>
         <Route exact path="/Maps">
-          {/* Página de MedicationTable */}
+       
           {isLoggedIn ? < MapaInterfaz/> : <Redirect to="/Maps" />}
         </Route>
         <Route exact path="/Contenidos">
-          {/* Página de MedicationTable */}
+         
           {isLoggedIn ? <Contenidos /> : <Redirect to="/Contenidos" />}
         </Route>
         <Route exact path="/Meds">
-          {/* Página de MedicationTable */}
+          
           {isLoggedIn ? <TusMedicamentos /> : <Redirect to="/Meds" />}
         </Route>
         <Route exact path="/Tests">
-          {/* Página de MedicationTable */}
+          
           {isLoggedIn ? <Tests /> : <Redirect to="/Tests" />}
         </Route>
         <Route exact path="/Diario">
-          {/* Página de MedicationTable */}
+          
           {isLoggedIn ? <DiarioForm /> : <Redirect to="/Diario" />}
         </Route>
         <Route exact path="/Contact">
-          {/* Página de MedicationTable */}
+         
           {isLoggedIn ? <ContactUs/> : <Redirect to="/Contact" />}
         </Route>
         <Route exact path="/Agenda">
-          {/* Página de MedicationTable */}
+          
           {isLoggedIn ? <ComponenteCalendario/> : <Redirect to="/Agenda" />}
         </Route>
         
-        {/* Otras rutas de tu aplicación */}
-      
         <Route exact path="/chetos">
-          {/* Página de MedicationTable */}
+          
           {isLoggedIn ? <Chetos /> : <Redirect to="/chetos" />}
         </Route>
       </Switch>

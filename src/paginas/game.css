@@ -42,6 +42,9 @@ width: 20%;
 height: 20%;
 
 }
+.img-meds{
+  width: 300px;
+}
 .img-redd{
 height: 200px;
 width: 300px;
@@ -56,7 +59,7 @@ width: 300px;
 div.body-meds{
   text-align: center;
   align-items: center;
-  display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
+  display: inline-block;
   justify-content: center;
   display: flex; 
 }
@@ -66,4 +69,10 @@ h2#fc-dom-86{
 .ytp-cued-thumbnail-overlay-image {
   border-radius: 60%;
  display: inline-flexbox !important;
+}
+button.boton{
+  
+  text-align: center;
+  margin-left: 2rem;
+  background-color: deeppink;
 }

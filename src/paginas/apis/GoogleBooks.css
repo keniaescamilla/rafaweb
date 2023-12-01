@@ -1,0 +1,38 @@
+.book-list {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)) !important;
+    gap: 20px !important;
+  }
+  
+  .book-card {
+    border: 1px solid #ccc !important;
+    padding: 20px !important;
+    border-radius: 5px !important;
+    overflow: hidden !important; /* Evita que el contenido desborde */
+  }
+  
+  .book-card h3 {
+    margin-bottom: 10px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+  
+  .book-card p {
+    margin-bottom: 5px !important;
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 30!important; 
+    -webkit-box-orient: horizontal !important;
+    text-overflow: ellipsis !important;
+    font-size: 18px;
+  
+  }
+  img-thumbnail{
+    position: absolute;
+  }
+  .img-libro{
+    position: fixed;
+   
+  }
+  

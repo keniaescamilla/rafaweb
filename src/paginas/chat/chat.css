@@ -111,6 +111,7 @@
 }
 
 #chat2 {
+  background-color:rgb(241, 236, 211);
   width: 100%; /* Establece el ancho al 100% de su contenedor padre */
   max-width: 100%; /* Asegúrate de que no sea más grande que su contenedor */
   /* ... otros estilos ... */

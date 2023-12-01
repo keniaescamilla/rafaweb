@@ -1,5 +1,5 @@
 import React from 'react';
-import './headerchat.css'; // Archivo CSS para los estilos
+import './headerchat.css'; 
 
 
 const Headerchat = () => {

@@ -68,7 +68,10 @@ const TusMedicamentos = () => {
         ))}
       </datalist>
 
-      <h2>Resultados:</h2>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
       <ul>
         {resultados.map(medicamento => (
          
