@@ -7,7 +7,7 @@ const TusMedicamentos = () => {
   const [resultados, setResultados] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/medicamentos')
+    axios.get('http://localhost:3006/medicamentos')
       .then(response => {
         setMedicamentos(response.data);
       })

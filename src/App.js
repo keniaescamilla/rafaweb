@@ -8,7 +8,7 @@ import HeroEffects from './paginas/header';
 import QuotesContainer from './paginas/apis/frasesinsp';
 import RedditPosts from './paginas/apis/subreddit';
 import AboutUs from '../src/paginas/about';
-import Login from './paginas/loginpag/login';
+import Login from './paginas/loginpag/page/login';
 import Contacto from './paginas/apis/contactanos';
 import Tests from './paginas/apis/tests';
 import Contenidos from './paginas/game';
@@ -20,7 +20,7 @@ import DiarioList from './paginas/apis/obtenerdiario';
 import ContactUs from './paginas/apis/contactanos';
 import Chat from './paginas/chat/chat'
 import MapaInterfaz from './paginas/apis/mapainterfaz';
-import Registro from './paginas/loginpag/registro';
+import Registro from './paginas/loginpag/page/registro';
 import ComponenteCalendario from './paginas/apis/ComponenteCalendar';
 
 
