@@ -1,3 +1,14 @@
 body{
     background-color:rgb(248, 248, 232)!important;
 }
+
+.test {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    color: darkslategray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  

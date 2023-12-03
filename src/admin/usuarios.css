@@ -1,0 +1,43 @@
+/* ... Estilos existentes ... */
+
+.agregar-usuario-btn {
+      background-color: blue;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px; /* Espacio entre el botón y la tabla */
+      cursor: pointer;
+      width: 400px;
+    }
+    
+    .agregar-usuario-btn:hover {
+      background-color: #0056b3; /* Un tono de azul más oscuro para el efecto hover */
+    }
+    
+
+    /* ... Estilos existentes ... */
+
+.editar-btn {
+      color: white;
+      background-color: green;
+      /* Resto de tus estilos para el botón */
+    }
+    
+    .eliminar-btn {
+      color: white;
+      background-color: red;
+      /* Resto de tus estilos para el botón */
+    }
+    
+    /* Estilos para los íconos dentro de los botones */
+   /* En tu archivo CSS */
+.editar-btn svg,
+.eliminar-btn svg {
+  margin-right: 5px;
+  color: white;  /* Color del ícono */
+  width: 20px;   /* Tamaño del ícono */
+  height: 20px;  /* Tamaño del ícono */
+}
+
+    

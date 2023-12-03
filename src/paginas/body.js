@@ -30,14 +30,7 @@ const Body = () => {
       </span>
           
         </button>
-        <Link to="/Tests">
-        <button className="neumorphic">
-      <i className="fa-light fa-disease"></i>
-      <span>
-        <Link to="/Tests">Tests Psicológicos</Link>
-      </span>
-    </button>
-    </Link>
+      
     <Link to="/Agenda">
         <button className="neumorphic">
       <i className="fa fa-calendar" aria-hidden="true"></i>
@@ -62,14 +55,7 @@ const Body = () => {
       </span>
     </button>
     </Link>
-    <Link to="/Diario">
-        <button className="neumorphic">
-      <i className="fa fa-book" ></i>
-      <span>
-        <Link to="/Diario"> Escrito Temporal</Link>
-      </span>
-    </button>
-    </Link>
+    
 
       </div>
    <div>

@@ -1,0 +1,33 @@
+* {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      box-sizing: border-box;
+  }
+  
+
+.sidebar {
+      background-color: black;
+      color: white;
+      width: 200px; /* Ajusta el ancho según tus necesidades */
+      height: 100vh; /* Altura completa de la ventana */
+      padding: 20px;
+      box-sizing: border-box;
+  }
+  
+  .menu-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+  }
+  
+  .menu-item i {
+      margin-right: 10px;
+  }
+  
+  /* Estilos adicionales para los iconos, si es necesario */
+  .icon-home, .icon-users {
+      /* Estilos para los iconos */
+  }
+  

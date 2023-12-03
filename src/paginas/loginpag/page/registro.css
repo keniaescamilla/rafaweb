@@ -1,20 +1,16 @@
-/* ... Estilos existentes ... */
+.modal-message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+}
 
-.success-modal {
-    background-color: green;
-    color: white;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .error-modal-2 {
-    background-color: red;
-    color: white;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
+.modal-message.success {
+  color: green;
+  background-color: #b3ffb3;
+}
+
+.modal-message.error {
+  color: red;
+  background-color: #ffb3b3;
+}
