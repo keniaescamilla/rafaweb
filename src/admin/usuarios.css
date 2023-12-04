@@ -1,5 +1,17 @@
-/* ... Estilos existentes ... */
+.tituloTabla{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+}
 
+.acciones {
+  display: flex;
+  justify-content: space-around; /* Esto separará los botones uniformemente */
+  align-items: center; /* Esto centrará los botones verticalmente */
+}
+
+.tituloAcciones{
+  text-align: center;
+}
 .agregar-usuario-btn {
       background-color: blue;
       color: white;
@@ -8,13 +20,24 @@
       border-radius: 5px;
       margin-bottom: 10px; /* Espacio entre el botón y la tabla */
       cursor: pointer;
-      width: 400px;
+      width: 200px;
     }
     
     .agregar-usuario-btn:hover {
       background-color: #0056b3; /* Un tono de azul más oscuro para el efecto hover */
     }
     
+    button{
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 150px;
+      justify-content: center;
+    }
 
     /* ... Estilos existentes ... */
 
@@ -40,4 +63,11 @@
   height: 20px;  /* Tamaño del ícono */
 }
 
-    
+.contPrincipal{
+  margin-top: 100px;
+  margin-left: 300px;
+}
+
+.usuarios-table{
+  width: 100%;
+}

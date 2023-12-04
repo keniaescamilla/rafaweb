@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { FaHome, FaUser } from 'react-icons/fa';
-import '../index.css';
+import './index.css';
 import './dashboard.css'
-import Tabla from './usuarios'
 
 class Navbar extends Component {
   constructor(props) {
@@ -25,9 +23,16 @@ class Navbar extends Component {
   toggleMenu = () => {
     this.setState(prevState => ({
       menuToggle: !prevState.menuToggle
-    }));
+    }), () => {
+      // Asumiendo que tienes un método para actualizar la clase en el nav-wrapper
+      if (this.state.menuToggle) {
+        document.querySelector('.nav-wrapper').classList.add('sidebar-hidden');
+      } else {
+        document.querySelector('.nav-wrapper').classList.remove('sidebar-hidden');
+      }
+    });
   };
-
+  
   render() {
     const { menuToggle, isAuthenticated, userName } = this.state;
 
@@ -36,10 +41,11 @@ class Navbar extends Component {
 
 
 <div className='body-home'>
-        <div className="sidebar">
-          <a href="/home"><FaHome className="sidebar-icon" />Inicio</a>
-          <a href="/usuarios"><FaUser className="sidebar-icon" />Usuarios</a>
-        </div>
+<div className="sidebar">
+  <a href="/tabla" className='opciones'>Usuarios</a>
+</div>
+
+
         <nav id="navbar" className={menuToggle ? 'active' : ''}>
           <div className="nav-wrapper">
             {/* Navbar Logo */}
@@ -87,7 +93,7 @@ class Navbar extends Component {
           </div>
         </nav>
       </div>
-      <Tabla></Tabla>
+      
       </>
      
     );

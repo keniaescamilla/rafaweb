@@ -1,0 +1,92 @@
+.confirm-modal-content {
+  /* ... otros estilos ... */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  overflow: hidden; /* Previene el desbordamiento */
+}
+
+.confirm-modal-content .mensaje {
+  margin: 20px 0; /* Añade un margen vertical si es necesario */
+  text-align: center;
+  overflow: auto; /* Añade barras de desplazamiento si el contenido es demasiado largo */
+  word-wrap: break-word; /* Asegura que las palabras largas pasen a la siguiente línea */
+}
+
+.confirm-modal-actions {
+  width: 100%; /* Asegura que los botones no excedan el ancho del modal */
+  display: flex;
+  justify-content: space-evenly; /* Separa los botones uniformemente */
+}
+
+.confirm-modal-actions button {
+  /* ... otros estilos ... */
+  flex: none; /* Asegura que los botones no se estiren */
+}
+
+
+
+.confirm-modal {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .confirm-modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      width: 500px; /* Ancho fijo para el modal */
+      text-align: center;
+      box-sizing: border-box; /* Asegura que el padding no aumente el ancho */
+      
+    }
+    
+    .confirm-modal-content {
+      /* ... estilos existentes/* Asegura que el padding y el borde estén incluidos en el ancho */
+      overflow: hidden; /* Asegura que nada se desborde fuera del modal */
+    }
+    
+    .confirm-modal-content .mensaje {
+      word-wrap: break-word; /* Asegura que las palabras largas pasen a la siguiente línea */
+      overflow-wrap: break-word; /* Alternativa a word-wrap */
+      margin: 20px 0; /* Añade un margen vertical si es necesario */
+    }
+    
+    .confirm-modal-content h2 {
+      color: red;
+      word-wrap: break-word; /* Asegura que el texto largo se ajuste */
+    }
+    
+    .confirm-modal-actions button {
+      margin: 10px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .confirm-modal-actions button:first-child {
+      background-color: red;
+      color: white;
+    }
+    
+    .confirm-modal-actions button:last-child {
+      background-color: grey;
+      color: white;
+    }
+
+    .mensaje{
+      color: black;
+      text-align: center;
+      word-wrap: break-word; 
+    }
+    
+
+  

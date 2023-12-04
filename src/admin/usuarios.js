@@ -1,19 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import ModalForm from './modalForm'; // Asegúrate de que este componente esté correctamente importado
-import './usuarios.css'; // Asegúrate de que este archivo CSS exista
-import { FaEdit, FaTrashAlt } from 'react-icons/fa'; 
+import ModalForm from './modalForm'; // Para agregar nuevos usuarios
+import EditModalForm from './editarModal'; // Para editar usuarios
+import './usuarios.css';
+import { FaEdit, FaTrashAlt } from 'react-icons/fa';
+import ConfirmDeleteModal from './deleteModal';
 
 function UsuariosTable() {
   const [usuarios, setUsuarios] = useState([]);
+  const [usuarioSeleccionado, setUsuarioSeleccionado] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const [usuarioActual, setUsuarioActual] = useState(null);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
 
+  const handleEliminarUsuario = (usuario) => {
+    setUsuarioSeleccionado(usuario);
+    setShowDeleteModal(true);
+  };
 
-  const handleEditarUsuario = (usuario) => {
-      setUsuarioActual(usuario); // Establecer el usuario actual a editar
-      setShowModal(true);
-    };
+  const handleConfirmDelete = async () => {
+    try {
+      await axios.delete(`http://localhost:3001/usuarios/${usuarioSeleccionado.id_usuario}`);
+      setShowDeleteModal(false);
+      fetchUsuarios();
+    } catch (error) {
+      console.error('Error al eliminar usuario', error);
+    }
+  };
 
   const fetchUsuarios = async () => {
     try {
@@ -29,26 +42,38 @@ function UsuariosTable() {
   }, []);
 
   const handleAgregarUsuario = () => {
+    setUsuarioSeleccionado(null);
     setShowModal(true);
+  };
+
+  const handleEditarUsuario = (usuario) => {
+    setUsuarioSeleccionado(usuario);
+    setShowEditModal(true);
   };
 
   const handleModalClose = () => {
     setShowModal(false);
+    setShowEditModal(false);
   };
 
   const handleFormSubmit = async (usuarioData) => {
     try {
-      await axios.post('http://localhost:3001/usuarios/', usuarioData);
-      setShowModal(false);
-      fetchUsuarios(); // Recargar la lista de usuarios
+      if (usuarioSeleccionado) {
+        await axios.put(`http://localhost:3001/usuarios/${usuarioSeleccionado.id_usuario}`, usuarioData);
+      } else {
+        await axios.post('http://localhost:3001/usuarios/', usuarioData);
+      }
+      handleModalClose();
+      fetchUsuarios();
     } catch (error) {
-      console.error('Error al agregar usuario', error);
+      console.error('Error al procesar el formulario', error);
     }
   };
 
   return (
     <>
-      <h1>Lista de Usuarios</h1>
+    <div className='contPrincipal'>
+    <h1 className='tituloTabla'>Lista de Usuarios</h1>
       <button className="agregar-usuario-btn" onClick={handleAgregarUsuario}>Agregar Nuevo Usuario</button>
       <table className="usuarios-table">
         <thead>
@@ -57,7 +82,7 @@ function UsuariosTable() {
             <th>Nombre</th>
             <th>Correo</th>
             <th>Password</th>
-            <th>Acciones</th>
+            <th className='tituloAcciones'>Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -67,11 +92,11 @@ function UsuariosTable() {
               <td>{usuario.nombre}</td>
               <td>{usuario.correo}</td>
               <td>{usuario.password}</td>
-              <td>
-              <button className="editar-btn" onClick={() => handleEditarUsuario(usuario)}>
-                  <FaEdit /> Editar
-                </button>
-                <button className="eliminar-btn"><FaTrashAlt /> Eliminar</button>
+              <td className='acciones'>
+                <button className="editar-btn" onClick={() => handleEditarUsuario(usuario)}><FaEdit /> Editar</button>
+                <button className="eliminar-btn" onClick={() => handleEliminarUsuario(usuario)}>
+          <FaTrashAlt /> Eliminar
+        </button>
               </td>
             </tr>
           ))}
@@ -79,11 +104,26 @@ function UsuariosTable() {
       </table>
       {showModal && (
         <ModalForm
-          usuario={usuarioActual}
           onClose={handleModalClose}
           onSubmit={handleFormSubmit}
         />
       )}
+      {showEditModal && (
+        <EditModalForm
+          usuario={usuarioSeleccionado}
+          onClose={handleModalClose}
+          onSubmit={handleFormSubmit}
+        />
+      )}
+      {showDeleteModal && (
+        <ConfirmDeleteModal
+          usuario={usuarioSeleccionado}
+          onClose={() => setShowDeleteModal(false)}
+          onConfirm={handleConfirmDelete}
+        />
+      )}
+    </div>
+     
     </>
   );
 }

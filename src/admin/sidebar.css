@@ -7,7 +7,7 @@
   
 
 .sidebar {
-      background-color: black;
+    background: rgba(255, 255, 255,0.7) ;
       color: white;
       width: 200px; /* Ajusta el ancho según tus necesidades */
       height: 100vh; /* Altura completa de la ventana */

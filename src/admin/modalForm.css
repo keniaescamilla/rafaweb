@@ -36,7 +36,7 @@
       margin-top: 5px;
     }
     
-    button {
+    .botonForm{
       margin-top: 10px;
       padding: 10px 15px;
       background-color: blue;
@@ -46,7 +46,10 @@
       cursor: pointer;
       width: 200px;
       justify-content: center;
+      margin-left: 130px;
     }
+
+ 
     
     button:hover {
       background-color: #0056b3;
@@ -54,4 +57,43 @@
     
     .tituloForm{
       color:black;
+    }
+
+    .message-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000; /* Asegurarse de que esté sobre otros elementos */
+    }
+    
+    .message-modal-content {
+      padding: 20px;
+      border-radius: 5px;
+      color: white;
+      text-align: center;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .modal-message {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+      text-align: center;
+      transition: all 0.5s ease;
+    }
+    
+    .success {
+      background-color: #28a745; /* Verde para éxito */
+    }
+    
+    .error {
+      background-color: #dc3545; /* Rojo para error */
     }

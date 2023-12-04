@@ -26,6 +26,7 @@ import Rutinas from "./paginas/apis/Rutinas";
 import Mapita from "./paginas/apis/Mapita";
 import GoogleBooksAPI from "./paginas/apis/googlelibros";
 import Dash from './admin/dashboard'
+import Tabla from './admin/usuarios'
 
 const Content = () => {
   return (
@@ -238,7 +239,18 @@ const App = () => {
               </>
             }
           />
-          {/* Agrega más rutas aquí */}
+          
+
+
+          <Route
+            path="/tabla"
+            element={
+              <>
+              <Dash></Dash>
+                <Tabla/>
+              </>
+            }
+          />
         </Routes>
       </div>
     </Router>
