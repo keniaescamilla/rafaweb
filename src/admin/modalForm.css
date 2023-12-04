@@ -39,7 +39,7 @@
     button {
       margin-top: 10px;
       padding: 10px 15px;
-      background-color: blue;
+      background-color: deeppink;
       color: white;
       border: none;
       border-radius: 5px;
@@ -49,7 +49,7 @@
     }
     
     button:hover {
-      background-color: #0056b3;
+      background-color: rgb(247, 74, 218);
     }
     
     .tituloForm{

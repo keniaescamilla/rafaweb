@@ -73,7 +73,7 @@
     border-top: solid 1px rgba(255, 255, 255, 0.2);
     letter-spacing: 0.015em;
     display: block;
-    color: #eee;
+    color: #eee !important;
   }
   
   .content {

@@ -81,7 +81,7 @@ const App = () => {
                   <br></br>
                   <br></br>
                   <br></br>
-                  <h1>Contenido didactico</h1>
+                <h1>Contenido didctico</h1>
                   <YouTubeVideo />
                   <br></br>
                   <br></br>

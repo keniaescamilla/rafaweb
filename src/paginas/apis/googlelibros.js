@@ -25,21 +25,29 @@ const GoogleBooksAPI = () => {
     <div>
       <h1>Libros de autoayuda en Google Books</h1>
       <div className="book-list">
-        {books.map((book, index) => (
-          <div key={index} className="book-card">
-            <h3>{book.volumeInfo.title}</h3>
-           
-            {book.volumeInfo.imageLinks && (
-              <img className='img-libro' src={book.volumeInfo.imageLinks.thumbnail} alt="Miniatura del libro" className="thumbnail" />
-            )}
-             <p className='p-libros'>Autores: {book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'No disponible'}</p>
+        {books
+          .filter(book => book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail)
+          .map((book, index) => (
+            <div key={index} className="book-card">
+              <h3>{book.volumeInfo.title}</h3>
+              <div>
+              <img
+                className='img-libro'
+                src={book.volumeInfo.imageLinks.thumbnail}
+                alt="Miniatura del libro"
+                className="thumbnail"
+              />
+              </div>
+              <div className='libro-card'>
+              <p className='p-libros'>Autores: {book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'No disponible'}</p>
             <p className='p-libros'>Código de barras: {book.volumeInfo.industryIdentifiers ? book.volumeInfo.industryIdentifiers[0].identifier : 'No disponible'}</p>
             <p className='p-libros' >Categorías: {book.volumeInfo.categories ? book.volumeInfo.categories.join(', ') : 'No disponible'}</p>
             <p className='p-libros'>Link de vista previa: <a href={book.volumeInfo.previewLink} target="_blank" rel="noopener noreferrer">Ver vista previa</a></p>
             <p className='p-libros'>Precio: {book.saleInfo.listPrice ? book.saleInfo.listPrice.amount : 'No disponible'}</p>
             <p className='p-libros'>Enlace: <a href={book.volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">Ver en Google Books</a></p>
-          </div>
-        ))}
+            </div>
+            </div>
+          ))}
       </div>
     </div>
   );

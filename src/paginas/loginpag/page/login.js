@@ -29,6 +29,7 @@ function Login() {
   };
 
   return (
+    <div className='Appi'>
     <div className="body-login">
       <div className="container-login">
         <div className="brand-logo"></div>
@@ -55,6 +56,7 @@ function Login() {
           <button className="button-login">REGISTRATE</button>
         </Link>
       </div>
+    </div>
     </div>
   );
 }

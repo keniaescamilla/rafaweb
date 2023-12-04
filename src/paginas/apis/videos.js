@@ -13,12 +13,12 @@ const YouTubeVideo = () => {
         'https://www.googleapis.com/youtube/v3/search', {
           params: {
             part: 'snippet',
-            key: 'AIzaSyATgXqvPX-5Czr_7yB8bXh8TsOL5KGKHik', // Nueva clave de API
+            key: 'AIzaSyATgXqvPX-5Czr_7yB8bXh8TsOL5KGKHik', 
             q: searchQuery,
             maxResults: 3,
             type: 'video',
             order: 'date',
-            relevanceLanguage: 'es', // Filtrar por idioma español
+            relevanceLanguage: 'es',
           }
         }
       );
@@ -59,7 +59,7 @@ const YouTubeVideo = () => {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <button className='boton' type="submit">Search</button>
+        <button className='boton' type="submit">Buscar</button>
       </form>
       <br />
       {videos.map((video) => (

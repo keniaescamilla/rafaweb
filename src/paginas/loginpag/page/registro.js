@@ -32,7 +32,7 @@ function Registro() {
   };
 
   return (
-    <div className='body-login'>
+    <div className="Appi">
       <div className="container-login">
         <div className="brand-logo"></div>
         <div className="brand-title">TSAKIN</div>

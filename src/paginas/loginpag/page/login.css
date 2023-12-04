@@ -8,9 +8,15 @@
   border-radius: 5px;
   text-align: center;
 }
+div.Appi{
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/517/112/original/vector-mental-health-illustration.jpg") !important;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:right;
+  padding-left: 30rem;
 
 
-/* login.css */
+}
 
 .google-button {
   background-color: #4285f4 !important;
@@ -31,7 +37,7 @@
 .body-login {
 
   margin: 0;
-  width: 50vw;
+  width: 40vw;
   height: 130vh;
   background: #ecf0f3;
   display: flex;
@@ -85,7 +91,7 @@ background-size: 10rem;
   margin-top: 10px;
   font-weight: 900;
   font-size: 1.8rem;
-  color: #1DA1F2;
+  color: deeppink;
   letter-spacing: 1px;
 }
 
@@ -130,13 +136,14 @@ input {
 .button-login {
   color: white;
   margin-top: 10px;
-  background: #1DA1F2;
+  background:deeppink;
   height: 40px;
   border-radius: 20px;
   cursor: pointer;
   font-weight: 900;
   box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
   transition: 0.5s;
+ 
 }
 
 button:hover {

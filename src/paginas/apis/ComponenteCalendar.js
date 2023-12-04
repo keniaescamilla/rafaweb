@@ -15,7 +15,7 @@ const ComponenteCalendario = () => {
 
   const handleDateClick = (info) => {
     const titulo = prompt("Ingrese el nombre de la cita:");
-    if (titulo) {
+    if (titulo !== null && titulo.trim() !== "") {
       const estadoEmocional = prompt("Ingrese el estado emocional:");
       const notas = prompt("Ingrese notas de la sesión:");
       const nuevoEvento = {
@@ -27,19 +27,24 @@ const ComponenteCalendario = () => {
       };
       const nuevasCitas = [...citas, nuevoEvento];
       setCitas(nuevasCitas);
+    } else {
+      alert("Debe ingresar un texto para el nombre de la cita.");
     }
   };
 
   const handleEditClick = (event) => {
     const nuevoTexto = prompt("Ingrese el nuevo nombre de la cita:", event.title);
-    if (nuevoTexto) {
+    if (nuevoTexto !== null && nuevoTexto.trim() !== "") {
       const eventID = parseInt(event.id); 
       const citasActualizadas = citas.map((cita) =>
         cita.id === eventID ? { ...cita, title: nuevoTexto } : cita
       );
       setCitas(citasActualizadas);
+    } else {
+      alert("Debe ingresar un texto para el nuevo nombre de la cita.");
     }
   };
+
 
   const handleRemoveClick = (event) => {
     const eventID = parseInt(event.id);
